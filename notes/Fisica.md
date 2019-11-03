@@ -2,7 +2,7 @@
 tags: [Appunti, Fisica]
 title: Fisica
 created: '2019-11-02T12:29:04.797Z'
-modified: '2019-11-02T13:33:26.504Z'
+modified: '2019-11-03T16:03:51.470Z'
 ---
 
 # Fisica
@@ -87,3 +87,10 @@ $\vec{E}(\vec{x})=\frac{1}{4\pi\epsilon_0}\iint\frac{\sigma}{|\vec{x}-\vec{x'}|^
 $\vec{E}(\vec{x})=\frac{1}{4\pi\epsilon_0}\int\frac{\lambda}{|\vec{x}-\vec{x'}|^2}d\ell(\vec{x})$
 
 ### Campo elettrico generato da una distribuzione superficiale di carica
+Sia un disco carico, si cerca il campo elettrico sull'asse.
+Considero singoli anelli concentrici, per poi integrare sull'intero disco
+$E_{dq}\cdot\stackrel{\wedge}{j}=-E_{dq'}\cdot \stackrel{\wedge}{j}$, le componenti orizzontali di due cariche diametralmente oppost si annullano e rimangono solamente le componenti lungo l'asse, 
+$\displaystyle E_{dq}\cdot\stackrel{\wedge}{i}=E_{dq'}\cdot \stackrel{\wedge}{i}$.
+Si ha $dq=\frac{q_{TOT}}{2\pi r}\cdot d\ell$, inoltre $\displaystyle cos\vartheta=\frac{x}{D}=\frac{x}{\sqrt{x^2+r^2}}$.
+$d\vec{E}=\frac{dq}{4\pi\epsilon_0}\cdot\frac{1}{D^2}\cdot\stackrel{\wedge}{r}=\frac{dq}{4\pi\epsilon_0(\sqrt{x^2+R^2})^2}$, fissata la direzione $\stackrel{\wedge}{i}$ allora $dE_x=\frac{dq}{4\pi\epsilon_0(x^2+R^2)}cos\vartheta$
+$\displaystyle E_x=\int_{anello}\frac{dq}{4\pi\epsilon_0(x^2+R^2)}\cdot\frac{x}{\sqrt{x^2+R^2}}=\frac{1}{4\pi\epsilon_0}\frac{x}{(x^2+R^2)^{\frac{3}{2}}}\int_{anello}dq=\frac{Qx}{4\pi\epsilon_0(x^2+R^2)^{\frac{3}{2}}}=E_x$
