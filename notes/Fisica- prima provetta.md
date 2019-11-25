@@ -1,11 +1,11 @@
 ---
 tags: [Appunti, Fisica]
-title: Fisica
+title: Fisica- prima provetta
 created: '2019-11-02T12:29:04.797Z'
-modified: '2019-11-03T16:03:51.470Z'
+modified: '2019-11-25T18:09:20.333Z'
 ---
 
-# Fisica
+# Fisica- prima provetta
 ## Vettori e componenti
 $S=(S_x, S_y, S_x)$
 
