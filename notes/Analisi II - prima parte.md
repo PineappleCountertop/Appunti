@@ -1,11 +1,11 @@
 ---
 tags: [Analisi II]
-title: Analisi II
+title: Analisi II - prima parte
 created: '2020-01-03T12:27:53.464Z'
-modified: '2020-01-03T14:40:41.058Z'
+modified: '2020-01-03T18:39:14.276Z'
 ---
 
-# Analisi II
+# Analisi II - prima parte
 
 # Serie numeriche
 Serie di numeri reali o complessi
@@ -129,8 +129,27 @@ Quindi $\displaystyle a_n \cancel{\to }0\Rightarrow \sum_{n=\overset{-}{n}+1}^{+
 Sia $\sum a_n$ con $a_n>0$  $\forall n\in\mathbb{N}^+$
 se esiste $k\in ]0,1[$ t.c. $\displaystyle \sqrt[n]{a_n}$ ($\Leftrightarrow a_n\le  k^n$)  $\forall n\in\mathbb{N}^+$ allora $\sum a_n$ converge
 
-#### Corollario del criterio della radice
+#### Corollario del criterio della radice (con il limite)
+Se $\sum a_n$, con $a_n>0$,  $\forall n\in\mathbb{N}^+$
+Si ha:
+1. se esiste $\displaystyle\lim_n \sqrt[n]{a_n}=L$, con $L<1$, $\sum a_n$ converge
+2. se esiste $\displaystyle\lim_n  \sqrt[n]{a_n}=L$ ,con $L>1$, $\sum a_n$ diverge a $+\infty$
 
-
+### Criterio generale di Cauchy
+#### Successioni
+Sia $(a_n)_n$ una successione in $\mathbb{R}$
+ $\displaystyle\lim_n a_n=l\Leftrightarrow \forall\varepsilon>0\exists\overset{-}{n}$t.c. $\forall n\ge \overset{-}{n}$, $|a_n-L|<\varepsilon$
+#### Condizione di Cauchy
+$(a_n)_n$ verifica la condizione di Cauchy se 
+ $(\forall\varepsilon>0)(\exists\overset{-}{n})(\forall n)(\forall p)(n> \overset{-}{n}\Rightarrow |a_n-a_m|<\varepsilon)$, dove $m=p+n$
+#### Teorema
+$(a_n)_n$ è convergente $\Leftrightarrow$ $a_n$ verifica la condizione di Cauchy
++ Per le serie: Sia $\sum a_n$ in $\mathbb{R}$. Si ha $\sum a_n$ convergente $\Leftrightarrow$ esiste finito $\displaystyle\lim_n s_n=s$
+cioè $\displaystyle\lim_n a_n=l\Leftrightarrow \forall\varepsilon>0\exists\overset{-}{n}$t.c. $\forall n\ge \overset{-}{n}$, $|s_n-s|<\varepsilon$
+$\sum a_n$ è convergente (cioè $s_n$ è convergente) $\Leftrightarrow$ $s_n$ verifica la condizione di Cauchy
+ $(\forall\varepsilon>0)(\exists\overset{-}{n})(\forall n)(\forall p)(n> \overset{-}{n}\Rightarrow |s_n-s_{n+p}|<\varepsilon)$
+ Essendo $s_{n+p}-s_n=(a_{n+p}+a_{n+p-1}+...+a_1)-(a_n+...+a_1)=a_{n+1}+...+a_{n+p}$
+ Allora la condizione di Cauchy diventa
+  $(\forall\varepsilon>0)(\exists\overset{-}{n})(\forall n)(\forall p)(n> \overset{-}{n}\Rightarrow |a_{n+1}+...+a_{n+p}|<\varepsilon)$
 
 
