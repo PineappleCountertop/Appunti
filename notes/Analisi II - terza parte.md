@@ -2,7 +2,7 @@
 tags: [Analisi II]
 title: Analisi II - terza parte
 created: '2020-01-04T12:27:41.542Z'
-modified: '2020-01-04T21:45:01.295Z'
+modified: '2020-01-05T16:26:55.196Z'
 ---
 
 # Analisi II - terza parte
@@ -242,6 +242,87 @@ Consideriamo la funzione $f(\underset{-}{x_0}+t\underset{-}{v}):]-δ,δ[\to \mat
 Derivata direzionale: se esiste finito $\displaystyle\lim_{t\to 0}\frac{f(\underset{-}{x_0}+t\underset{-}{v})-f(\underset{-}{x_0})}{t}$ esso si dice derivata direzionale di $f$ in $x_0$ lungo la direzione orientata $\underset{-}{v}$
 ## Osservazione
 Si ha che $x_0\in intE$, perchè altrimenti il rapporto incrementale potrebbe __non__ essere definito
+## NB
+$f(\underset{-}{x})=(f_1(\underset{-}{x}),...,f_M(\underset{-}{x}))^T$ e $\underset{-}{l}=(l_1,...,l_n)^T$
+## Teorema
+Si ha $\displaystyle \lim_{\underset{-}{x}\to \underset{-}{x_0}}f(\underset{-}{x})=\underset{-}{l}\Leftrightarrow$ per ogni $i=1,..,M$, $\displaystyle \lim_{\underset{-}{x}\to \underset{-}{x_0}}f_i(\underset{-}{x})=l_i$
+## Limite sui campi scalari
+Sia $f:E(\subseteq \mathbb{R}^N)\to \mathbb{R}$ e sia $\underset{-}{x}\in \mathbb{R}^N$ di accumulazione per $E$. Si dice che $\lim_{\underset{-}{x}\to \underset{-}{x_0}}f(\underset{-}{v})=+\infty$ (o $-\infty$) se
+$(\forall k\in\mathbb{R})(\exists U\in \mathfrak{J}_{x_0})(\forall \underset{-}{x}\in E)(\forall \underset{-}{x}\in U\setminus\{\underset{-}{x_0}\}\Rightarrow f(\underset{-}{x})>k)$ $\Leftrightarrow$ 
+$(\forall k\in \mathbb{R})(\exists δ>0)(\forall \underset{-}{x}\in E)(0<d(\underset{-}{x},\underset{-}{x_0})<δ\Rightarrow f(\underset{-}{x})>k)$ (o $f(\underset{-}{x})<k$ per $f(\underset{-}{x})\to -/\infty$)
+
+## Teorema
+Sia $f:\mathbb{R}^N\to\mathbb{R}^M$ e $\underset{-}{x_0}\in E$ con $F(\underset{-}{x})=(F_1(\underset{-}{x}),...,F_N(\underset{-}{x}))^T$ Si dice che $F$ è continua in $\underset{-}{x_0}$ $\Leftrightarrow$ $\forall i=1,...,N$, $F_i$ è continua in $\underset{-}{x_0}$.
+
+## Definizione
+Sia $C\subseteq \mathbb{R}^N$. Si dice che $C$ è __connesso__ se $\forall \underset{-}{x},\underset{-}{y}\in C$ esiste una curva continua $γ:[a,b]\to \mathbb{R}^N$ t.c. $γ(a)=\underset{-}{x}$, $γ(b)=\underset{-}{y}$, $\forall t\in [a,b]$, $γ(t)\in C$.
+## NB
+In $\mathbb{R}^N$, $N=1$, $C$ è connesso $\Leftrightarrow$ $C$ è un punto singolo o un intervallo
+## Teorema della connessione
+Se $f:C(\subseteq\mathbb{R}^N)\to\mathbb{R}^M$ è continua e $C$ è connesso, allora $f(C)$ è connesso
+## Dimostrazione
+Per provare che $f(C)$ è connesso, scegliamo arbitrariamente $\underset{-}{ξ},\underset{-}{η}\in f(C)$. Esistono $\underset{-}{x},\underset{-}{y}\in C | f(\underset{-}{x})=\underset{-}{ξ}$ e $f(\underset{-}{y}=\underset{-}{η}$.
+Poichè $C$ è connesso esiste una curva continua $γ:[a,b]\to \mathbb{R}^N|γ(a)=\underset{-}{x}$ e $γ(a)=\underset{-}{y}$. Pongo $δ=f\circ γ:[a,b]\to \mathbb{R}^N$, $δ$ è una curva continua. Inoltre: $δ(a)=f(γ(a))=\underset{-}{ξ}$, $δ(b)=f(γ(b))=\underset{-}{η}$. Inoltre $δ(t)=f(γ(t))\in f(C)$, per ogni $t\in [a,b]$, $\Rightarrow$ $δ$ è la curva continua che collega $\underset{-}{ξ}$ e $\underset{-}{η}$, $\Rightarrow$ $C$ è connesso.
+
+## Teorema di Bolzano
+Se $f:C(\subseteq \mathbb{R}^N)\to\mathbb{R}$ è continua, $C$ è connesso ed esistono $\underset{-}{x},\underset{-}{y}\in C|f(\underset{-}{x})f(\underset{-}{y})<0$. Allora $\exists \underset{-}{z}\in C$ t.c. $f(\underset{-}{z})=0$
+## Dimostrazone
+Sia $f\underset{-}{x})<0<f(\underset{-}{y})$. Poichè $C$ è conneso e $f$ è continua, $f(C)$ è connesso in $\mathbb{R}$. Ma essendo $f(C)$ conneso e $f(\underset{-}{x})\neq f(\underset{-}{y})$, allora $f(C)$ è un intervallo: contiene numeri positivi e numeri negativi. Quindi $0\in f(C)$ e pertanto $\exists z\in C|f(\underset{-}{z})=0$
+
+### Corollario
+Se $f:C(\subseteq\mathbb{R}^N)\to\mathbb{R}$ è continua e $C$ è conneso e $f(\underset{-}{x})\neq 0$, $\forall \underset{-}{x}\in C$, allora o $f(\underset{-}{x})>0\forall \underset{-}{x}\in C$ oppure $f(\underset{-}{x})<0\forall \underset{-}{x}\in C$
+### Definizione
+Sia $K\subseteq \mathbb{R}^N$, si dice che $K$ è __compatto__ se $K$ è chiuso e limitato.
+## Teorema della compattezza
+Se $f:K(\subseteq\mathbb{R}^N)\to\mathbb{R}^M$ è continua e $K$ è compatto, allora $f(K)$ è un compatto
+## Teorema di Weierstrass
+Se $f:K(\subseteq\mathbb{R}^N)\to\mathbb{R}^M$ è continua e $K$ è compatto, allora esistono $\underset{K}{max}f$ e $\underset{K}{min}f$
+## Dimostrazione
+Il teorema di compattezza implica che $f(K)$ è compatto in $\mathbb{R}$, cioè $f(K)$ è chiuso e limitato. Poichè $f(K)\subseteq \mathbb{R}$ ho $inf f(K)>-\infty$ e $sup f(K)<+\infty$. Ma $min f(K)=\underset{k}{min}f$ e $max f(K)=\underset{k}{max}f$. Se proviamo che $sup f(K)\in f(K)$, allora $sup f(K)=maxf(K)=\underset{k}{max}f$ (analogamente per il minimo).
+Se per assurdo $sup f(K)\notin f(K)$, allora $sup f(K)$ è un punto di accumulazione per $f(K)$, contro l'ipotesi in quanto contraddice il fatto che f(K) è chiuso (e quindi contiente tutti i suoi punti di accumulazione). Ma allora $sup f(K)\in f(K)\Rightarrow sup f(K)=\underset{k}{max}f$
+
+## Struttura lineare di $\mathbb{R}^N$
+In $\mathbb{R}^n$ si definiscono le operaazioni di
+1. somma, $\underset{-}{x}+\underset{-}{y}=(x_1+y_1,...,x_N+y_N)^T$, con $\underset{-}{x}=(x_1,...,x_n)$ e $\underset{-}{y}=(y_1,...,y_n)^T$
+2. prodotto per scalari, $λ\underset{-}{x}=((λx_1,...,λx_N)^T$, con $\underset{-}{x}=(x_1,...,x_n)$ e $λ\in \mathbb{R}$
+Rispetto a queste operazioni, $\mathbb{R}^n$ è uno spazio vettoriale di dimensione $n$
+La base canonica di $\mathbb{R}^N$ è: $\underset{-}{e_1}=(1,0,...,0)^T$,$...$,$\underset{-}{e_n}=(0,...,0,1)^T$
+## Definizione
+Si introduce in $\mathbb{R}$ il prodotto scalare euclideo: $<\underset{-}{x},\underset{-}{y}>=x_1y_1+...+x_ny_n$. Questo $\forall \underset{-}{x}=(x_1,...,x_n)\in \mathbb{R}^n$ e $\forall \underset{-}{y}=(y_1,...,y_n)\in \mathbb{R}^n$.
+Si ha che: $<\cdot ,\cdot >:\mathbb{R}^N\to \mathbb{R}$ verifica, $\forall \underset{-}{x},\underset{-}{y},\underset{-}{z}\in \mathbb{R}^n$ e $\forall λ\in \mathbb{R}$,:
++ (S1) $<\underset{-}{x}+\underset{-}{y},\underset{-}{z}=<\underset{-}{x},\underset{-}{z}>+<\underset{-}{y},\underset{-}{z}>$;
++ (S2) $<λ\underset{-}{x},\underset{-}{y}=λ<\underset{-}{x},\underset{-}{y}>$;
++ (S3) $<\underset{-}{x},\underset{-}{y}>=<\underset{-}{y},\underset{-}{x}>$
++ (S4) $<\underset{-}{x},\underset{-}{x}>\ge 0$ e $<\underset{-}{x},\underset{-}{x}>=\underset{-}{0}\Leftrightarrow \underset{-}{x}=\underset{-}{0}\rightarrow$ è definito positivo
+
+## Cauchy-Schwartz
+$\forall \underset{-}{x},\underset{-}{y}\in \mathbb{R}^n$, $|\underset{-}{x},\underset{-}{y}|\le \sqrt{<\underset{-}{x},\underset{-}{x}>}\cdot \sqrt{<\underset{-}{y},\underset{-}{y}}$ e inoltre vale $|<\underset{-}{x},\underset{-}{y}>|=\sqrt{<\underset{-}{x},\underset{-}{x}>}\cdot \sqrt{<\underset{-}{y},\underset{-}{y}}\Leftrightarrow \underset{-}{x}$ e $\underset{-}{y}$ sono linearmente indipendenti
+## Dimostrazione
+Se $\underset{-}{y}=\underset{-}{0}$ vale l'uguaglianza
+Se $\underset{-}{y}\neq \underset{-}{0}$, $\forall t\in \mathbb{R}$ calcolo: $<\underset{-}{x}-t\underset{-}{y},\underset{-}{x}-t\underset{-}{y}>=<\underset{-}{x},\underset{-}{x}>-2<\underset{-}{x},\underset{-}{y}>t+<\underset{-}{y},\underset{-}{y}>t^2$. Polinomio di secondo grado in $t$, con coefficiente di $t$ positivo.
+Studio il delta di questa disuguaglianza: $\frac{\Delta}{4}=<\underset{-}{x},\underset{-}{y}>^2-<\underset{-}{x},\underset{-}{x}>\cdot <\underset{-}{y},\underset{-}{y}>\le 0\Leftrightarrow \sqrt{<\underset{-}{x},\underset{-}{y}>^2}=|<\underset{-}{x},\underset{-}{y}>|\le \sqrt{<\underset{-}{x},\underset{-}{x}>}\cdot \sqrt{<\underset{-}{y},\underset{-}{y}>}$.
+Vale la disuguaglianza in quanto $CS\Leftrightarrow \Delta=0$ e quindi $\Leftrightarrow$ esiste un solo $\overset{-}{t}|<\underset{-}{x}-\overset{-}{t}\underset{-}{y},\underset{-}{x}-\overset{-}{t}\underset{-}{y}>=<\underset{-}{x},\underset{-}{x}>-2<\underset{-}{x},\underset{-}{y}>\overset{-}{t}+<\underset{-}{y},\underset{-}{y}>\overset{-}{t}^2=0$, ossia $\underset{-}{x}-\overset{-}{t}\underset{-}{y}=0$, cioè $\underset{-}{x}$ e $\underset{-}{y}$ sono linearmente indipendenti.
+## Definizione
+Sia $V$ uno spazio vettoriale su $\mathbb{R}$. Si dice prodotto scalare un'applicazione $<\cdot ,\cdot >:V\times V\to \mathbb{R}$ verificante (S1), (S2), (S3) e (S4)
+## Definizione
+$\forall \underset{-}{x}\in \mathbb{R}^n$ si definisce la __norma__, con $||x||=\sqrt{<\underset{-}{x},\underset{-}{x}>}=\sqrt{x_1^2,...,x_n^2}$, norma euclidea
+## Proposizione
+Si ha che $||\cdot ||:\mathbb{R}^n\to \mathbb{R}$ verifica, $\forall \underset{-},\underset{-}{y}\in \mathbb{R}^n$ e $λ\in \mathbb{R}$:
++ (n1) $||\underset{-}{x}||=0\Leftrightarrow \underset{-}{x}=\underset{-}{0}$, non degeneratezza
++ (n2) $||λ\underset{-}{x}||=|λ|\cdot ||\underset{-}{x}||$, omogeneità
++ (n3) $||\underset{-}{x}+\underset{-}{y}||\le ||\underset{-}{x}||+||\underset{-}{y}||$, sub-additività
+## Dimostrazione
++ (n1),(n2) banali
++ (n3) $||\underset{-}{x}+\underset{-}{y}||^2=<\underset{-}{x}+\underset{-}{y}>,\underset{-}{x}+\underset{-}{y}>=<\underset{-}{x},\underset{-}{x}>+2<\underset{-}{x},\underset{-}{y}>+<\underset{-}{y},\underset{-}{y}>\le ||\underset{-}{x}||^2+2||\underset{-}{x}||\cdot ||\underset{-}{y}||+||\underset{-}{y}||^2=(||\underset{-}{x}||+||\underset{-}{y}||)^2$, quindi $||\underset{-}{x}+\underset{-}{y}||\le ||\underset{-}{x}||+||\underset{-}{y}||$
+## Osservazione
+$\forall \underset{-}{x}\in \mathbb{R}^n$, $||\underset{-}{x}||=d(\underset{-}{x},0)$, dato che $\underset{-}{y}\in \mathbb{R}^n$: $d(\underset{-}{x},\underset{-}{y})=||\underset{-}{x}-\underset{-}{y}||$
+## Dimostrazione
+$\forall \underset{-}{x},\underset{-}{y},\underset{-}{z}\in \mathbb{R}^n$, si ha $d(\underset{-}{x},\underset{-}{y})=||\underset{-}{x}-\underset{-}{y}||=||\underset{-}{x}-\underset{-}{z}+\underset{-}{z}-\underset{-}{y}||\le ||\underset{-}{x}-\underset{-}{z}+||\underset{-}{y}-\underset{-}{z}||=d(\underset{-}{x},\underset{-}{z})+d(\underset{-}{y},\underset{-}{z})$
+## Definizione
+Sia $V$ uno spazio vettoriale su $\mathbb{R}$. Un'applicazione lineare $||\cdot ||:\mathbb{R}^n\to \mathbb{R}$ verificante (n1), (n2), (n3) si dice __norma__ in $V$
+## Definizione
+Si pone $d(\mathbb{R}^n,\mathbb{R}^m)=\{d:\mathbb{R}^n\to \mathbb{R}^m$, $d$ lineare $\}$ e si definisce $\mathbb{M}(m.n)=\{\mathbb{A}$, matrice di $n$ righe, $m$ colonne$\}$. Ogni volta che si fissa una base $\{\underset{-}{e_1},...,\underset{-}{e_n}\}$ in $\mathbb{R}^n$ e una base $\{\underset{-}{e'_1},...,\underset{-}{e'_m}\}$ in $\mathbb{R}^m$, esiste un __isomorfismo__ $α$ tra ($\mathbb{R}^n$,$\mathbb{R}^m$). A ogni $α:\mathbb{R}^n\to \mathbb{R}^m$ associo una matrice $\mathbb{A}(m\times n)|α(\underset{-}{x})=\mthbb{A}\underset{-}{x}$, $\forall \underset{-}{x}$. Risulta $α(\underset{-}{e_1})=(a_{11}...a_{m1})^T,..,α(\underset{-}{e_n})=(a_{1n}...a_{mn})^T$, in coordinate rispetto a $\{\underset{-}{e'_1},...,\underset{-}{e'_m}\}$
+
 
 
 
