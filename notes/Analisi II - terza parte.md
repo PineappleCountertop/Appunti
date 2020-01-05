@@ -2,7 +2,7 @@
 tags: [Analisi II]
 title: Analisi II - terza parte
 created: '2020-01-04T12:27:41.542Z'
-modified: '2020-01-05T16:26:55.196Z'
+modified: '2020-01-05T16:47:53.672Z'
 ---
 
 # Analisi II - terza parte
@@ -321,7 +321,7 @@ $\forall \underset{-}{x},\underset{-}{y},\underset{-}{z}\in \mathbb{R}^n$, si ha
 ## Definizione
 Sia $V$ uno spazio vettoriale su $\mathbb{R}$. Un'applicazione lineare $||\cdot ||:\mathbb{R}^n\to \mathbb{R}$ verificante (n1), (n2), (n3) si dice __norma__ in $V$
 ## Definizione
-Si pone $d(\mathbb{R}^n,\mathbb{R}^m)=\{d:\mathbb{R}^n\to \mathbb{R}^m$, $d$ lineare $\}$ e si definisce $\mathbb{M}(m.n)=\{\mathbb{A}$, matrice di $n$ righe, $m$ colonne$\}$. Ogni volta che si fissa una base $\{\underset{-}{e_1},...,\underset{-}{e_n}\}$ in $\mathbb{R}^n$ e una base $\{\underset{-}{e'_1},...,\underset{-}{e'_m}\}$ in $\mathbb{R}^m$, esiste un __isomorfismo__ $α$ tra ($\mathbb{R}^n$,$\mathbb{R}^m$). A ogni $α:\mathbb{R}^n\to \mathbb{R}^m$ associo una matrice $\mathbb{A}(m\times n)|α(\underset{-}{x})=\mthbb{A}\underset{-}{x}$, $\forall \underset{-}{x}$. Risulta $α(\underset{-}{e_1})=(a_{11}...a_{m1})^T,..,α(\underset{-}{e_n})=(a_{1n}...a_{mn})^T$, in coordinate rispetto a $\{\underset{-}{e'_1},...,\underset{-}{e'_m}\}$
+Si pone $d(\mathbb{R}^n,\mathbb{R}^m)=\{d:\mathbb{R}^n\to \mathbb{R}^m$, $d$ lineare $\}$ e si definisce $\mathbb{M}(m.n)=\{\mathbb{A}$, matrice di $n$ righe, $m$ colonne$\}$. Ogni volta che si fissa una base $\{\underset{-}{e_1},...,\underset{-}{e_n}\}$ in $\mathbb{R}^n$ e una base $\{\underset{-}{e'_1},...,\underset{-}{e'_m}\}$ in $\mathbb{R}^m$, esiste un __isomorfismo__ $α$ tra ($\mathbb{R}^n$,$\mathbb{R}^m$). A ogni $α:\mathbb{R}^n\to \mathbb{R}^m$ associo una matrice $\mathbb{A}(m\times n)|α(\underset{-}{x})=\mathbb{A}\underset{-}{x}$, $\forall \underset{-}{x}$. Risulta $α(\underset{-}{e_1})=(a_{11}...a_{m1})^T,..,α(\underset{-}{e_n})=(a_{1n}...a_{mn})^T$, in coordinate rispetto a $\{\underset{-}{e'_1},...,\underset{-}{e'_m}\}$
 
 
 
