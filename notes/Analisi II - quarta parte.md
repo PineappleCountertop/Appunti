@@ -1,8 +1,9 @@
 ---
+pinned: true
 tags: [Analisi II]
 title: Analisi II - quarta parte (2)
 created: '2020-01-05T18:30:05.992Z'
-modified: '2020-01-06T14:45:05.335Z'
+modified: '2020-01-06T20:04:33.519Z'
 ---
 
 # Analisi II - quarta parte
@@ -145,21 +146,17 @@ $Q$ è definita positiva $\Leftrightarrow$ dato $\mathbb{A}=\begin{pmatrix} a_{1
 $Q$ è definita positiva $\Leftrightarrow$ $\exists m>0$ t.c. $Q(\underline{h})\ge m||\underline{h}||^2$ per ogni $\underline{h}\in \mathbb{R}^n$. $Q$ è definita negativa $\Leftrightarrow$ $\exists M<0$ t.c. $Q(\underline{h})\le M||\underline{h}||^2$, per ogni $\underline{h}\in \mathbb{R}^n$
 ## Dimostrazione
 $Q$ è definita positiva $\Leftrightarrow$ $λ_1>0,...,λ_n>0$. Pongo $m=min\{λ_1,...,λ_n\}>0$. Allora $\forall \underline{h}\in \mathbb{R}^n$ esiste $\underline{k}\in \mathbb{R}^n$ t.c. $\underline{h}=\mathbb{U}\underline{k}$. Si ha $Q(\underline{h})=λ_1k_1^2+...+λ_nk_n^2\ge mk_1^2+...+mk_n^2=m||\underline{k}||^2=m||\mathbb{U}^T\underline{h}||^2=m||\underline{h}||^2$, essendo $\mathbb{U}$ ortogonale
-## Test Hessiana
-
-
-
-
-
-
-
-
-
-
-
-------------------------------------------------------------------------------------------
-DOPO FINE 2019-10-23
-
+## Test Hessiana (condizione sufficiente per l'esistenza di un punto di estremo)
+### Teorema
+Sia $f:E(\subseteq\mathbb{R}^n)\to\mathbb{R}$ due volte differenziabile in $\underline{x}^0\in intE$ e sia $\underline{x}^0$ un punto criticodi $f$, ossia $\nabla f(\underline{x}^0)=\underline{0}$. Si ha:
+1. Se $Hf(\underline{x}^0)$ è definita positiva, allora $\underline{x}^0$ è punto di minimo per $f$
+2. Se $Hf(\underline{x}^0)$ è definita positiva, allora $\underline{x}^0$ è punto di massimo per $f$ 
+3. Se $Hf(\underline{x}^0)$ è indefinita nel segno, allora $\underline{x}^0$ è punto di sella per $f$
+### Dimostrazione
+$f(\underline{x}^0)=f(\underline{x}^0)+<\nabla f(\underline{x}^0),\underline{x}-\underline{x}^0>+\frac{1}{2}<Hf(\underline{x}^0)(\underline{x}-\underline{x}^0),\underline{x}-\underline{x}^0>+o(||\underline{x}-\underline{x}_0||^2)$. Il punto è critico $\Rightarrow$ $\nabla f(\underline{x}^0)=\underline{0}$ $\Rightarrow$ $<\nabla f(\underline{x}^0),\underline{x}-\underline{x}^0>=0$. Allora: $f(\underline{x})-f(\underline{x}^0)=\frac{1}{2}<Hf(\underline{x}^0)(\underline{x}-\underline{x}^0),\underline{x}-\underline{x}^0>+o(||\underline{x}-\underline{x}_0||^2)$. Nel primo caso $Hf(\underline{x}^0)$ è definita positiva e quindi $\exists m>0$ t.c. $<Hf(\underline{x}^0)\underline{h},\underline{h}>\ge m||\underline{h}||^2$, $\forall \underline{h}\in \mathbb{R}^n$. Allora risulta che la funzione $\displaystyle f(\underline{x})-f(\underline{x}^0)=\frac{1}{2}<Hf(\underline{x}^0)(\underline{x}-\underline{x}^0),\underline{x}-\underline{x}^0>+o(||\underline{x}-\underline{x}_0||^2)\ge \frac{m}{2}||\underline{x}-\underline{x}^0||^2+o(||\underline{x}-\underline{x}^0||^2)=\left(\frac{m}{2}+\frac{o(||\underline{x}-\underline{x}^0||^2)}{||\underline{x}-\underline{x}^0||^2}\right)||\underline{x}-\underline{x}^0||^2$. Poichè $\displaystyle\lim_{\underline{x}\to \underline{x}^0}\left(\frac{m}{2}+\frac{o(||\underline{x}-\underline{x}^0||^2)}{||\underline{x}-\underline{x}^0||^2}\right)=\frac{m}{2}>0$ e, per il teorema di permanenza del segno esiste un intorno $U$ di $\underline{x}^0$ tale per cui $\frac{m}{2}+\frac{o(||\underline{x}-\underline{x}^0||^2)}{||\underline{x}-\underline{x}^0||^2}>0$, $\forall \underline{x}\in U\cap E$, con $\underline{x}\neq \underline{x}^0$. Ne segue che $f(\underline{x})-f\underline{x}^0)>0$, $\forall \underline{x}\in U\cap E$, con $\underline{x}\neq \underline{x}^0$, ossia $\underline{x}^0$ è punto di minimo relativo, la situazione è analoga per il secondo caso.
+Nel terzo caso: $Hf(\underline{x}^0)$ è indefinita nel segno, quindi $\exists \underline{u},\underline{v}\in \mathbb{R}^n$, versori, t.c. $<Hf(\underline{x}^0)\underline{u},\underline{u}><0<<Hf(\underline{x}^0)\underline{v},\underline{v}>)$. Pongo $g(t)=f(\underline{x}^0+t\underline{u})$ e $h(t)=f(\underline{x}^0+t\underline{v})$. Ho che $\displaystyle g(t)-g(0)=f(\underline{x}^0+t\underline{u})-f(\underline{x}^0)=\frac{1}{2}<Hf(\underline{x}^0)t\underline{u},t\underline{u}>+o(||t\underline{x}^0||^2)$.
+Ossia: $\frac{1}{2}<Hf(\underline{x}^0)t\underline{u},t\underline{u}>+o(||t\underline{x}^0||^2)=\frac{t^2}{2}<Hf(\underline{x}^0)\underline{u},\underline{u}+o(t^2)=\left(\frac{1}{2}<Hf(\underline{x}^0)\underline{u},\underline{u}>+\frac{o(t^2)}{t^2}\right)t^2$.
+Ma allora: $\displaystyle\lim_{t\to 0} \left(\frac{1}{2}<Hf(\underline{x}^0)\underline{u},\underline{u}>+\frac{o(t^2)}{t^2}\right)t^2=\frac{1}{2}<Hf(\underline{x}^0)\underline{u},\underline{u})><0$. Allora per il teorema di permanenza del segno esiste $δ>0$ t.c. $\frac{1}{2}<Hf(\underline{x}^0)\underline{u},\underline{u})>+\frac{o(t^2)}{t^2}>0$, per $0<|t|<δ$ e quindi $g(t)-g(0)<0$, $\forall 0<|t|<δ$, ossia $g$ ha un massimo in $t=0$. Ugualmente si verificache $h$ ha un minimo in $t=0$, ossia $\underline{x}^0$ è un punto di sella.
 ## Teorema
 Sia $f:\mathbb{R}^n\to \mathbb{R}$ continua e $\displaystyle\lim_{||\underline{x}^0\to +\infty||}f(\underline{x}^0)=+\infty$ allora esiste $\underset{\mathbb{R}^n}{min}f$, concetto simile alla coercività di $\mathbb{R}$. Analogmente se $\displaystyle\lim_{||\underline{x}^0\to +\infty||}f(\underline{x}^0)=+\infty$ allora esiste  $\underset{\mathbb{R}^n}{max}f$, concetto simile all'anticoercività di $\mathbb{R}$.
 
