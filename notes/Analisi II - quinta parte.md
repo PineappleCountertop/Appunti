@@ -1,9 +1,10 @@
 ---
-attachments: [Coordpolari.svg, Coorpolari.jpg]
+attachments: [Clipboard_2020-01-09-18-57-21.png, Coordpolari.svg, Coorpolari.jpg]
+pinned: true
 tags: [Analisi II]
 title: Analisi II - quinta parte
 created: '2020-01-06T13:23:39.864Z'
-modified: '2020-01-06T21:26:58.066Z'
+modified: '2020-01-09T19:20:55.117Z'
 ---
 
 # Analisi II - quinta parte
@@ -48,6 +49,37 @@ Se $\nabla φ\neq 0$ si può parlare di curve definite da equazioni
 Sia $φ:A(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto, di classe $C^1$ in $A$. Un punto $\underline{x}^0=(x_0,y_0)^T\in L_0(φ)$ si dice __regolare__ se $\nabla φ(\underline{x}^0)\neq \underline{0}$, __singolare__ altrimenti.
 ### Teorema di parametrizzazione locale (o della funzione implicita o di Dimi)
 Se $φ:A(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto, di classe $C^1$ e $\underline{x}^0=(x_0,y_0)^T$ è un punto regolare, $\nabla φ(\underline{x}^0)\neq \underline{0}$, con $φ(\underline{x}^0)=0$, allora esiste un intorno $U$ di $x_0$, un intorno $V$ di $y_0$, $g:U\to V$ e $h:V\to U$, $g,h\in C^1$ t.c. $L_0(φ)\cap (U\times V)=\begin{cases} G(g) \\ G(h) \end{cases}=$(*), a seconda di cosa posso definire. In base a cosa decido? In base a quale derivata parziale è $\neq 0$. Se lo sono entrambe cerco la funzione inversa di $y$
-(*)$=\begin{cases} G(g) \text{ se } φ_g(x_0,y_0)\neq 0 \\ G(h) \text{ se } φ_h(x_0,y_0)\neq 0 \end{cases}$
+(*)$=\begin{cases} G(g) \text{ se } φ_g(x_0,y_0)\neq 0 \\ G(h) \text{ se } φ_h(x_0,y_0)\neq 0 \end{cases}$. Inoltre si ha:
+$g'(x)=-\frac{φ_x(x,g(x))}{φ_y(x,h(x))}$, $\forall x\in U$, $φ_y(x^0,y^0)\neq 0$ oppure $h'(y)=-\frac{φ_y(h(y),y)}{φ_x(g(y),y)}$, $\forall y\in V$, $φ_x(x^0,y^0)\neq 0$. 
+In particolare, la retta tangente a $L_0(φ)$ in $(x^0,y^0)^T$ ha equazione $y=g(x^0)+g'(x^0)(x-x^0)\Leftrightarrow y-y^0=-\frac{φ_x(x^0,y^0)}{φ_y(x^0,y^0)}(x-x^0)$ (1), se $φ_y(x^0,y^0)\neq 0$ oppure $x=h(y^0)+h'(y^0)(y-y^0)\Leftrightarrow x-x^0=-\frac{φ_y(x^0,y^0)}{φ_x(x^0,y^0)}(y-y^0)$ (1), se $φ_x(x^0,y^0)\neq 0$.
+(1)(2) e quindi $\Leftrightarrow$ $φ_x(x^0,y^0)(x-x^0)+φ_y(x^0,y^0)(y-y^0)=0$. $<\nabla φ(\underline{x}^0),\underline{x}-\underline{x}^0>=0$, allo stesso modo trovo lo stesso prodotto scalare per $φ_x(x^0,y^0)=0$, cioè $\nabla φ(\underline{x}^0)$ è $\bot (\underline{x}-\underline{x}^0)$
+![phi.png](../phi.png)
+### Conseguenze
+Sotto le ipotesti del sopracitato teorema si ha $\nabla φ(\underline{x}^0)$ è ortogonale alla retta tangente a $L_0(φ)$ nel punto $\underline{x}^0$ e quindi a $L_0(φ)$ nel punto $0$
+### Osservazione
+$λ(φ)\cap (υ\times V)=G(g)\Rightarrow φ(x,g(x))=0$ in $U$. Si ha che la funzione $y=g(x)$ è definita in modo implicito dall'equazione $φ(x,y)=0$ e della condizione $g(x^0)=y^0$.
+### Definizione
+Sia $φ:A(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto, di classe $C^1$, tale che $L_0(φ)=\{(x,y)\in A|φ(x,y)=0\}\neq \emptyset$ e $\nabla φ(x,y)\neq 0$ per ogni $(x,y)^T\in L_0(φ)$. La coppia $(φ,L_0(φ))$ si dice curva regolare in forma __implicita__ di $φ(x,y)=0$. $φ(x,y)=0$ è l'equazione e $L_0(φ)$ è il sostegno.
+### Definizione
+Siano $A(\subseteq \mathbb{R}^2)$ aperto connesso e $σ=K=clA(\subseteq \mathbb{R}^2)$, con $σ(u,v)=(x(u,v), y(u,v), z(u,v))^T$. Supponiamo allora che:
+1. $σ$ è di classe $C^1$ in $intK$
+2. $\forall \underline{u}=(u,v)^T\in intK$, $σ_u(x_u(u,v), y_u(u,v), z_u(u,v))^T$ e $σ_v(u,v)=(x_v(u,v),y_v(u,v),z_v(u,v))^T$ sono linearmente indipendenti. Ossia $σ_u(u,v)\times σ_v(u,v)\neq 0$
+3. $\forall u_1,u_2\in K$, con $u_1\neq u_2$ e $u_1\in intK$ e $u_2\in intK$, allora si ha $σ(u_1)\neq σ(u_2)$. La coppia formata da $(σ,σ(k))$ si dice __superficie__ regolare sempline in forma parametrica, di cui $σ$ è la parametrizzazione e $\Sigma=σ(κ)$ è il __sostegno__.
+### Definizione
+Sia $σ:K(\subseteq \mathbb{R}^2\to \mathbb{R}^3$ una superficie regolare semplice in forma parametrica. Fisso un $\underline{u}^0=(u^0,v^0)^T\in intK$ e sia il punto $\underline{x}^0=σ(\underline{u})\in\Sigma$. Le curve $σ(\cdot, v^0):]u^0-δ,u^0+δ[\to \mathbb{R}^2$ e $σ(u^0,\cdot ):]v^0-δ,v^0+δ[\to \mathbb{R}^2$ sono regolari semplici e si dicono __linee coordinate__ passanti per $\underline{x}^0$
+### Definizione
+Il vettore $σ_u(u^0,v^0)$ è il vettore tangente alla linea coordinata da $u$ in $\underline{x}^0$ e il vettore $σ_v(u^0,v^0)$ è il vettore tangente alla linea coordinata $v$ in $\underline{x}^0$. Il vettore $σ_v(u^0,v^0)\times σ_u(u^0,v^0)$ si dice vettore __normale__ a $\Sigma$ in $\underline{x}^0$ e invece il versore dato da $\displaystyle \nu(u^0,v^0)=\frac{σ_v(u^0,v^0)\times σ_u(u^0,v^0)}{||σ_v(u^0,v^0)\times σ_u(u^0,v^0)||}$ è il __vettore normale__ a $\Sigma$ in $\underline{x}^0$
+### Definizione
+Il piano generato da $σ_u(u^0,v^0)$ e $σ_v(u^0,v^0)$ passante per $\underline{x}^0$ si dice piano tangente a $\Sigma$ in $\underline{x}^0$, ed è rappresentato da:
+1. $\underline{x}=λσ_u(u^0,v^0)+\mu σ_v(u^0,v^0)+\underline{x}^0$, $\forall (λ,\mu)\in \mathbb{R}^2\to$rappresentazione __parametrica__
+2. $<σ_u(u^0,v^0)\times σ_v(u^0,v^0),\underline{x}-\underline{x}^0>=0\to$ rappresentazione implicita.
+### Definizione
+Sia $f:K=clA(\subseteq \mathbb{R}^2)\to \mathbb{R}$, con $A$ aperto e connesso, di classe $C^1$ in $intK$. La superficie in forma parametrica $σ(u,v)$, dato che $σ(u,v)=(u,v,f(u,v))^T$, con $(u,v)\in K$, è una superfice regolare semplice, dove $\Sigma=σ(K)=G(f)$ e inoltre vale: $\displaystyle σ_u\times σ_v=\begin{pmatrix} 1 \\ 0 \\ f_u\end{pmatrix}\times \begin{pmatrix} 0 \\ 1 \\ f_v \end{pmatrix}=det \begin{pmatrix} e_1\text{   }e_2\text{   }e_3 \\ 1\text{     }0\text{   }f_u\\ 0\text{   }1\text{   }f_v \end{pmatrix}=\begin{pmatrix}-f_u \\ -f_v \\ 1 \end{pmatrix}$ 
+### Definizione
+Sia $φ:A(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto, di classe $C^1$. supponiamo che $\Sigma=L_0(φ)=\{(x,y,z)^T=0\}\neq \emptyset$ e per ogni $(x,y,z)^T\in L_0(φ)$ sia $\nabla φ(x,y,z)\neq 0$. La coppia $(φ,L_0(φ))$ si dice superficie regolare in forma __implicita__ di cui $φ(x,y,z)=0$ è l'equazione e $\Sigma=L_0(φ)$ è il sostegno. Il piano tangente a $\Sigma$ in $\underline{x}^0$ è rappresentato dall'equazione $<\nabla φ(\underline{x}^0), \underline{x}-\underline{x}^0>=0$.
+### Definizione, Curve regolari in forma implicita in $\mathbb{R}^3$
+Siano $φ,\psi:A(\subseteq \mathbb{R}^3)\to \mathbb{R}$, con $A$ aperto e di classe $C^1$, tali che $\Gamma=L_0(φ)\cap L_0(\psi)=\{(x,y,z)^T\ | φ(x,y,z)=0, \psi(x,y,z)=0\}\neq \emptyset$ e $\nabla φ(x,y,z)\times \nabla \psi(x,y,z)\neq 0$, per ogni $(x,y,z)^T\in L_0(φ)\cap L_0(\psi)=\Gamma$. La coppia $((φ,\psi),L_0(φ)\cap L_0(\psi))$ si dice curva regolare in forma implicita in $\mathbb{R}^3$ di cui $\begin{cases} φ(x,y,z)=0 \\ \psi(x,y,z)=0\end{cases}$ sono le equazioni e $\Gamma=L_0(φ)\cap L_0(\psi)$ è il sostegno. Il vettore $\nabla φ(\underline{x}^0)\times \psi(\underline{x}^0)$ è il vettore tangente a $\Gamma$ in $\underline{x}^0$, e la retta $\underline{x}=\underline{x}^0+t(\nabla φ(\underline{x}^0)\times \psi(\underline{x}^0))$, $t\in \mathbb{R}$ è la retta tangente a $\Gamma$ in $\underline{x}^0$ , questa è la forma parametrica.
+Considero un altro modo per scriverlo: $\begin{cases} <φ(\underline{x}^0),\underline{x}-\underline{x}^0>=0\text{   }(\text{piano tangente a }L_0(φ)) \\ <\psi(\underline{x}^0),\underline{x}-\underline{x}^0>=0\text{   }(\text{piano tangente a }L_0(φ)) \end{cases}$
+
 
 

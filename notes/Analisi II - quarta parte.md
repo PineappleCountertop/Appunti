@@ -1,9 +1,8 @@
 ---
-pinned: true
 tags: [Analisi II]
 title: Analisi II - quarta parte (2)
 created: '2020-01-05T18:30:05.992Z'
-modified: '2020-01-06T20:04:33.519Z'
+modified: '2020-01-09T18:02:02.630Z'
 ---
 
 # Analisi II - quarta parte
@@ -29,7 +28,7 @@ Si dice matrice Jacobiana di $f$ in $\underline{x_0}$
 ---
 Il concetto di derivabilità per funzioni a più variabili lungo una direzione non è una buona generalizzazione della misura di derivabilità per le funzioni ad una variabile 
 ## Riesame del caso unidimensionale
-Siano $f:A(\subseteq\mathbb{R})\to\mathbb{R}$, con $A$ aperto, $x_0\in A$. Si ha che $f$ è derivabile in $x_0$ $|Leftrightarrow$ esiste $a\in \mathbb{R}$ t.c.
+Siano $f:A(\subseteq\mathbb{R})\to\mathbb{R}$, con $A$ aperto, $x_0\in A$. Si ha che $f$ è derivabile in $x_0$ $\Leftrightarrow$ esiste $a\in \mathbb{R}$ t.c.
 $f(x)=f(x_0)+af(x-x_0)+o(|x-x_0|)$. Inoltre risulta $a=f'(x_0)$ e la funzione $\overline{f}(x)=f(x_0)+f'(x_0)(x-x_0)$ si dice approssimazione lineare di $f$ in $x_0$ (polinomio di Taylor di ordine $1$)
 ## Osservazione
 L'applicazione lineare $L:\mathbb{R}\in \mathbb{R}$ t.c. $L(h)=a\cdot h$ è lineare, cioè $L\in \mathscr{L}(\mathbb{R},\mathbb{R})$. Dunque si ha $f$ derivabile in $x_0$ $\Leftrightarrow$ esiste $L\in \mathscr{L}(\mathbb{R},\mathbb{R})$ t.c. $f(x)=f(x_0)+L(x-x_0)+o(|x-x_0|)$. Questo è il punto di partenza per introdurre la corretta definizione di derivabilità per le funzioni di più variabili.
@@ -159,7 +158,6 @@ Ossia: $\frac{1}{2}<Hf(\underline{x}^0)t\underline{u},t\underline{u}>+o(||t\unde
 Ma allora: $\displaystyle\lim_{t\to 0} \left(\frac{1}{2}<Hf(\underline{x}^0)\underline{u},\underline{u}>+\frac{o(t^2)}{t^2}\right)t^2=\frac{1}{2}<Hf(\underline{x}^0)\underline{u},\underline{u})><0$. Allora per il teorema di permanenza del segno esiste $δ>0$ t.c. $\frac{1}{2}<Hf(\underline{x}^0)\underline{u},\underline{u})>+\frac{o(t^2)}{t^2}>0$, per $0<|t|<δ$ e quindi $g(t)-g(0)<0$, $\forall 0<|t|<δ$, ossia $g$ ha un massimo in $t=0$. Ugualmente si verificache $h$ ha un minimo in $t=0$, ossia $\underline{x}^0$ è un punto di sella.
 ## Teorema
 Sia $f:\mathbb{R}^n\to \mathbb{R}$ continua e $\displaystyle\lim_{||\underline{x}^0\to +\infty||}f(\underline{x}^0)=+\infty$ allora esiste $\underset{\mathbb{R}^n}{min}f$, concetto simile alla coercività di $\mathbb{R}$. Analogmente se $\displaystyle\lim_{||\underline{x}^0\to +\infty||}f(\underline{x}^0)=+\infty$ allora esiste  $\underset{\mathbb{R}^n}{max}f$, concetto simile all'anticoercività di $\mathbb{R}$.
-
 
 
 
