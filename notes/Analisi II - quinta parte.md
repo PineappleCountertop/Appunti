@@ -4,7 +4,7 @@ pinned: true
 tags: [Analisi II]
 title: Analisi II - quinta parte
 created: '2020-01-06T13:23:39.864Z'
-modified: '2020-01-09T19:20:55.117Z'
+modified: '2020-01-10T13:13:52.017Z'
 ---
 
 # Analisi II - quinta parte
@@ -80,6 +80,40 @@ Sia $φ:A(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto, di classe $C^1$. sup
 ### Definizione, Curve regolari in forma implicita in $\mathbb{R}^3$
 Siano $φ,\psi:A(\subseteq \mathbb{R}^3)\to \mathbb{R}$, con $A$ aperto e di classe $C^1$, tali che $\Gamma=L_0(φ)\cap L_0(\psi)=\{(x,y,z)^T\ | φ(x,y,z)=0, \psi(x,y,z)=0\}\neq \emptyset$ e $\nabla φ(x,y,z)\times \nabla \psi(x,y,z)\neq 0$, per ogni $(x,y,z)^T\in L_0(φ)\cap L_0(\psi)=\Gamma$. La coppia $((φ,\psi),L_0(φ)\cap L_0(\psi))$ si dice curva regolare in forma implicita in $\mathbb{R}^3$ di cui $\begin{cases} φ(x,y,z)=0 \\ \psi(x,y,z)=0\end{cases}$ sono le equazioni e $\Gamma=L_0(φ)\cap L_0(\psi)$ è il sostegno. Il vettore $\nabla φ(\underline{x}^0)\times \psi(\underline{x}^0)$ è il vettore tangente a $\Gamma$ in $\underline{x}^0$, e la retta $\underline{x}=\underline{x}^0+t(\nabla φ(\underline{x}^0)\times \psi(\underline{x}^0))$, $t\in \mathbb{R}$ è la retta tangente a $\Gamma$ in $\underline{x}^0$ , questa è la forma parametrica.
 Considero un altro modo per scriverlo: $\begin{cases} <φ(\underline{x}^0),\underline{x}-\underline{x}^0>=0\text{   }(\text{piano tangente a }L_0(φ)) \\ <\psi(\underline{x}^0),\underline{x}-\underline{x}^0>=0\text{   }(\text{piano tangente a }L_0(φ)) \end{cases}$
+### Lo studio deli estremi di $f:E(\subseteq\mathbb{R}^n)\to\mathbb{R}$, $A$ aperto, di classe $C^1$
+Si artocola
++ nello studio degli estremi in $intE$, studio degli estremi liberi
++ nello studio degli estremi in $frE$, studio degli estremi vincolati
+#### Estremi vincolati
+##### Vincolo
+Se $f:E(\subseteq\mathbb{R}^n)\to\mathbb{R}$. Un insieme $\emptyset\neq \underline{0}V\underset{\neq}{\subset}E$ si dice vincolo per $f$
+##### Punti di estremo vincolato
+Siano $f:E(\subseteq\mathbb{R}^n)\to\mathbb{R}$ e $V$ un vincolo per $f$. Si dice che $\underline{x}^0\in V$ è un punto di estremo vincolato per $f$ se $V$ se $\underline{x}^0$ è t.c. $f(\underline{x})>f(\underline{x}^0)$, $\forall x\in U\cap V$, $\underline{x}\neq \underline{x}^0$ (minimo vincolato) oppure $f(\underline{x})<f(\underline{x}^0)$, $\forall x\in U\cap V$, $\underline{x}\neq \underline{x}^0$ (massimo vincolato) 
+---
+### Consideriamo
+$N=2$, $V=\Gamma$, curva $\begin{cases} \text{Curva regolare in forma parametrica in }\mathbb{R}^2 \text{(T5)} \\ \text{curva regolare in forma implicita in }\mathbb{R}^2 \text{(T5)}\end{cases}$, $V$ può anche essere solo un punto,
+$N=3$, $V=\begin{cases} \text{curva,}\Gamma\begin{cases}\text{curva regolare in forma parametrica (T1)} \\ \text{curva regolare in forma implicita (T5)}\end{cases}\text{, }V\text{ può anche essere intervalli o altri tipi di insieme} \\ \text{superficie,}\Sigma \begin{cases} \text{superficie regolare in forma parametrica (T2)} \\ \text{superficie regolare in forma implicita (T4)}\end{cases} \text{ in } \mathbb{R}^3\end{cases}$
+
+#### Teorema <span style="color:red">(T3)</span> ($N=2$ o $N=3$, $V=\Gamma$, curva in forma parametrica)
+Sia $f:A(\subseteq\mathbb{R}^n)\to\mathbb{R}$, $A$ aperto, di classe $C^1$. Sia $γ:ι\to A$ una curva regolare, $I$ intervallo. e $\underline{x}^0=γ(t^0)$, con $t^0\in intI$ è un punto di estremo vincolato per $f$ su $\Gamma=γ(I)$, allora $<\nabla f(\underline{x}^0),γ'(t^0)>=0$
+#### Osservazione
+Se $\nabla f(\underline{x}^0)\neq \underline{0}$, allora $\nabla f(\underline{x}^0)$ è $\bot$ a $L_f(\underline{x}^0)(f)$ e a $\Gamma$ in $\underline{x}^0$ e quindi $L_f(\underline{x}^0)(f)$ e $\Gamma$ sono tangenti in $\underline{x}^0$
+#### Dimostrazione
+Studiare $f_{|_{\Gamma}}$ equivale a studiare la funzione $\psi:I\to \mathbb{R}$, con $\psi(t)=f(γ(t))$. Poichè $f_{|_{\gamma}}$ ha un punto di estremo in $\underline{x}^0$, $\psi$ ha un punto di estremo in $t^0$ con $γ(t^0)=\underline{x}^0$, $t^0\in intI$. Essendo $f$ e $γ$ di classe $C^1$, $\psi$ è di classe $C^1$. Quindi per il teorema di Fermat $0=\psi '(t^0)=<\nabla f(γ(t^0)),γ'(t^0)>=<\nabla f(\underline{x}^0),γ'(t^0)>$.
+#### Teorema <span style="color:red">(T2)</span> ($N=3$, $V=\Sigma$, superficie regolare in forma parametrica)
+Sia $f:A(\subseteq\mathbb{R}^3)\to\mathbb{R}$, $A$ aperto, di classe $C^1$ e sia $σ:k\to A$  una superficie regolare semplice. Se $\underline{x}^0=σ(μ^0)$, con $u^0\in intK$, è un punto di etremo per $f$ su $\Sigma=σ(K)$, allora 
+(-- MANCA TESI --)  
+#### Osservazione
+
+#### Problema
+Es. estremi di $f(x,y)=x+y$, su $x^4+y^4-4xy=1\to $ curva regolare in forma implicita
+#### Teorema <span style="color:red">(T3)</span>, ($N=2, V=\Gamma$, curva regoalre in forma implicita o dei moltiplicatori di Lagrange)
+Siano $\underset{φ}{f}:E(\subseteq\mathbb{R}^2)\to\mathbb{R}$, aperto, di classe $C^1$. Se $\underline{x}^0\in \Gamma=L_0(φ)=\{(x,y)^T=φ(x,y)=0\}$ è un punto di estremo vincolato di $f$ su $\Gamma$ e $\nabla φ(\underline{x}^0)\neq \underline{0}$, allora esiste $λ\in \mathbb{R}$ t.c. $\nabla f(\underline{x}^0)=λ\nabla φ(\underline{x}^0)$
+#### Dimostrazione
+Poichè $\nabla φ(\underline{x}^0)\neq \underline{0}$ il teorema di parametrizzazione locale (Dini) garantisce che $\exists$ un intorno $W$ di $\underline{x}^0$ e $\exists$ una curva regolare in forma parametrica $γ:I\in \mathbb{R}^2$ t.c. $γ(I)=\Gamma=L_0(φ)\cap W$. ($\Rightarrow$ localmente vincolo è una curva parametrica $\Rightarrow$ applico ) 
+
+
+
 
 
 
