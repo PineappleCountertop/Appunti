@@ -1,10 +1,11 @@
 ---
-attachments: [Clipboard_2020-01-09-18-57-21.png, Coordpolari.svg, Coorpolari.jpg]
+attachments: [Clipboard_2020-01-09-18-57-21.png, Coordpolari.svg, Coorpolari.jpg, ModelliEpidemie.png, ModelliMatematici.png]
+favorited: true
 pinned: true
 tags: [Analisi II]
 title: Analisi II - quinta parte
 created: '2020-01-06T13:23:39.864Z'
-modified: '2020-01-10T13:13:52.017Z'
+modified: '2020-01-11T12:01:01.373Z'
 ---
 
 # Analisi II - quinta parte
@@ -104,16 +105,79 @@ Studiare $f_{|_{\Gamma}}$ equivale a studiare la funzione $\psi:I\to \mathbb{R}$
 Sia $f:A(\subseteq\mathbb{R}^3)\to\mathbb{R}$, $A$ aperto, di classe $C^1$ e sia $σ:k\to A$  una superficie regolare semplice. Se $\underline{x}^0=σ(μ^0)$, con $u^0\in intK$, è un punto di etremo per $f$ su $\Sigma=σ(K)$, allora 
 (-- MANCA TESI --)  
 #### Osservazione
-
+Se $\nabla f(\underline{x}^0)\neq 0$, allora $\nabla f(\underline{x}^0)\bot σ_u(\underline{u}^0)$ o $\nabla f(\underline{x}^0)\bot σ_v(\underline{u}^0)$  e quindi $\nabla f(\underline{x}^0)$ è $\bot$ al piano tangente $\Sigma$ in $\underline{x}^0$, cioè $\nabla f(\underline{x}^0)\bot\Sigma$.
+Poichè $\nabla f(\underline{x}^0)\bot L_{f(\underline{x}^0)}(f)$, si conclude che $\Sigma$ e $L_{f(\underline{x}^0)}(f)$ sono tangenti in $\underline{x}^0$
 #### Problema
-Es. estremi di $f(x,y)=x+y$, su $x^4+y^4-4xy=1\to $ curva regolare in forma implicita
-#### Teorema <span style="color:red">(T3)</span>, ($N=2, V=\Gamma$, curva regoalre in forma implicita o dei moltiplicatori di Lagrange)
+Es. estremi di $f(x,y)=x+y$, su $x^4+y^4-4xy=1\to$ curva regolare in forma implicita
+#### Teorema <span style="color:red">(T3)</span>, ($N=2, V=\Gamma$, curva regolare in forma implicita o dei moltiplicatori di Lagrange)
 Siano $\underset{φ}{f}:E(\subseteq\mathbb{R}^2)\to\mathbb{R}$, aperto, di classe $C^1$. Se $\underline{x}^0\in \Gamma=L_0(φ)=\{(x,y)^T=φ(x,y)=0\}$ è un punto di estremo vincolato di $f$ su $\Gamma$ e $\nabla φ(\underline{x}^0)\neq \underline{0}$, allora esiste $λ\in \mathbb{R}$ t.c. $\nabla f(\underline{x}^0)=λ\nabla φ(\underline{x}^0)$
 #### Dimostrazione
-Poichè $\nabla φ(\underline{x}^0)\neq \underline{0}$ il teorema di parametrizzazione locale (Dini) garantisce che $\exists$ un intorno $W$ di $\underline{x}^0$ e $\exists$ una curva regolare in forma parametrica $γ:I\in \mathbb{R}^2$ t.c. $γ(I)=\Gamma=L_0(φ)\cap W$. ($\Rightarrow$ localmente vincolo è una curva parametrica $\Rightarrow$ applico ) 
+Poichè $\nabla φ(\underline{x}^0)\neq \underline{0}$ il teorema di parametrizzazione locale (Dini) garantisce che $\exists$ un intorno $W$ di $\underline{x}^0$ e $\exists$ una curva regolare in forma parametrica $γ:I\in \mathbb{R}^2$ t.c. $γ(I)=\Gamma=L_0(φ)\cap W$. ($\Rightarrow$ localmente il vincolo è una curva parametrica $\Rightarrow$ applico <span style="color:red">(T1)</span>).
+Per <span style="color:red">(T1)</span> si ha $<f(\underline{x}^0),γ'(t^0)>=0$, dove $\underline{x}^0=γ(t^0)$ e $t^o\in intI$. D'altra parte $\nabla φ(\underline{x}^0)\bot γ'(t^0)$, $<\nabla φ(\underline{x}^0), γ'(t^0)>=0$ e quindi $\nabla  f(\underline{x}^0)$ e $\nabla φ(\underline{x}^0)$ sono paralleli, cioè esistono $α,β\in \mathbb{R}$ t.c. $α\nabla f(\underline{x}^0)+β\nabla φ(\underline{x}^0)=\underline{0}$, con $α,β$ non entrambi nulli. Poichè $α=0$ implicherebbe $\nabla  φ(\underline{x}^0)=0$ dev'essere $α\neq 0$. Posto $λ=-\frac{β}{α}$, si conclude che $\nabla f(\underline{x}^0)=λ\cdot \nablaφ(\underline{x}^0)$
+#### Teorema dei moltiplicatori di Lagrange ($N=2$, $V=\Gamma$, curve in forma implicita)
+Siano $f,φ:a(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto, di classe $C^1$ e sia $\Gamma=L_0(γ)=\{(x,y)^T\in A:φ(x,y)=0\}$.
+Se $\underline{x}^0=(x^0,y^0)\in \Gamma$ è un punto di estremo vincolato per $f$ su $\Gamma$ e $\nabla φ(\underline{x}^0)\neq \underline{0}$ allora esiste $x\in \mathbb{R}$ t.c. $\nabla f(\underline{x}^0)=λ\cdot \nabla φ(\underline{x}^0)$
+#### Osservazione: uso del teorema dei moltiplicatori di Lagrange
+1. Se $\Gamma$ è una curva regolare in forma implicita, cioè $\nabla φ\neq 0$, $\forall \underline{x}\in \Gamma$ allora i punti di estremo vincolato di $f$ su $\Gamma$ si ricercano tra le soluzioni $\underline{x}=(x,y)^T$ di 
+(L)$\begin{cases}f_x(x,y)=λφ_x(x,y) \\ f_y(x,y)=λφ_y(x,y)\end{cases} \\ φ(x,y)=0$. (tre incognite $x,y,λ$ anche se $λ$ è di relativa impotanza)
+2. Se $\Gamma$ non è una curva regolare in forma implicita, cioè esistono punti singolari, allora i punti di estremo vincolato di $f$ su $\Gamma$ vanno ricercati tra le soluzioni di (L), ma anche tra le soluzioni di 
+$\begin{cases}  φ_x(x,y)=0 \\  φ_y(x,y)=0 \\  φ(x,y)=0\end{cases}$
 
+#### Teorema dei moltiplicatori di Lagrange ($N=3$, $V=\Sigma$ superficie in forma implicita)
+Siano $f,φ:A(\subseteq\mathbb{R}^3)\to\mathbb{R}$, $A$ aperto, di classe $C^1$ e sia $\Sigma =\{(x,y,z)^T\in A:φ(x,y,z)=0\}=L_0(φ)$.
+Se $\underline{x}^0=(x^0,y^0,z^0)^T\in \Sigma$ è punto di estremo vincolato per $f$ su $\Sigma$ e $\nabla φ(\underline{x}^0)\neq \underline{0}$, allora esiste $λ\in \mathbb{R}$ t.c. $\nabla f(\underline{x}^0)=λ\nabla φ(\underline{x}^0)$
+#### Osservazione: uso del teorema dei moltiplicatori di Lagrange
+I punti di estremo vincolato per $f$ su $\Sigma$ vanno ricercati tra le soluzioni di:
++ punti regolari $\begin{cases}\nabla f(\underline{x})=λ\cdot \nabla φ(\underline{x}) \\ φ(\underline{x})=0 \end{cases}$
++ punti singolari $\begin{cases}\nabla φ(\underline{x})=\underline{0} \\ φ(\underline{x})=0 \end{cases}$
+#### Teorema ($N=3$, $V=\Sigma$ curva in forma implicita)
+Siano $f,F,\psi:A(\subseteq\mathbb{R}^3)\to\mathbb{R}$, $A$ aperto, di classe $C^1$. Sia $\Gamma =L_0(φ)\cap L_0(\psi)$, ossia in forma esplicita $\Gamma =L_0(φ)\cap L_0(\psi)=\{(x,y,z)^T:φ(x,y,z)=\psi(x,y,z)=0\}$. Se $\underline{x}^0=(x^0,y^0,z^0)^T\in \Gamma$ è un estremo vincolato per $f$ su $\Gamma$ e $\nabla φ(\underline{x}^0)\times \nabla \psi(\underline{x}^0)\neq \underline{0}$, allora esistono $λ,μ\in \mathbb{R}$, detti __moltiplicatori di Lagrange__, tali che $\nabla f(\underline{x}^0)=λ\nabla φ(\underline{x}^0)+μ\nabla \psi(\underline{x}^0)$.
+#### Osservazione
+Se $\Gamma$:
+1. è una curva regolare in forma implicita, cioè $\nabla φ\times \nabla \psi\neq \underline{0}$ in $\Gamma$, allora i punti di estremo vincolato per $f$ su $\Gamma$ vanno cercati tra:
+($\text{S}_1$)$\begin{cases} f_x(x,y,z)=λ\nabla φ_x(x,y,z)+μ\nabla \psi_x(x,y,z) \\ f_y(x,y,z)=λ\nabla φ_y(x,y,z)+μ\nabla \psi_y(x,y,z) \\ f_z(x,y,z)=λ\nabla φ_z(x,y,z)+μ\nabla \psi_z(x,y,z) \\ φ(x,y,z)=0 \\ \psi(x,y,z)=0 \end{cases}$ 
+2. Se $\Gamma$ non è una curva regolare in forma implicita, cioè ci sono punti singolari, i punti di estremo vincolato vanno cercati tra le soluzioni di ($\text{S}_1$) e di
+$\begin{cases} \nabla φ(x,y,z)\times\nabla \psi(x,y,z)=\underline{0} \\ φ(x,y,z)=0 \\ \psi(x,y,z)=0 \end{cases}$ si hanno cinque equazioni in tre incognite
 
+## Equazioni differenziali e modelli matematici
+### Modelli matematici
+![Modelli Matematici](../ModelliMatematici.png)
+#### Esempi di modelli
++ Decadimento radioattivo
+$N(t)=$ numero di radionuclidi al tempo $t$. $\frac{1}{τ}$ percentuale di radionuclidi che decadono nell'unità di tempo.
+$\displaystyle N(t+h)=N(t)-\frac{h}{τ}N(t)$
++ $\displaystyle \begin{cases}N((n+1)h)=N(nh)(1-\frac{h}{τ}) \\ N(0)=N_0 \end{cases}$
++ $\displaystyle\lim_{h\to 0}\frac{N(1+h)-N(t)}{h}=-\frac{1}{τ}N(t)$, $\begin{cases} N'(t)=-\frac{1}{τ}N(t) \\ N(0)=N_0 \end{cases}$
 
++ Modello discreto $\displaystyle N(nh)=N_0(1-\frac{h}{τ})$
++ Modello continuo $\displaystyle N(t)=N_0e^{-\frac{1}{τ}t}$
 
+### Dinamica delle popolazioni
+#### Popolazione isolata
+1. Risorse illimitate
+  * $N(t)$ persone al tempo $t$ (densità di popolazione al tempo $t$)
+  * $\nu$ natalità (tasso di natalità)
+  * $μ$ mortalità (tasso di mortalità)
+
+$N(t+h)=N(t)+\nu N(t)-μN(t)$
+$N(t+h)=N(t)+(\underbrace{\nu-μ}_{σ})N(t)$
+$\displaystyle\lim_{h\to 0} \frac{N(t+h)-N(t)}{h}=σN(t)$
+$\begin{cases} N'(t)=σN(t) \\ N(0)=N_0 \end{cases}$, $N(t)=N_0e^{σt}$
+2. Risorse limitate
+$\begin{cases} N'(t)=σN(t)-εN^2(t)\text{ ,}(ε>0) \\ N(0)=N_0 \end{cases}$
+modello di Verhulst (o logistico)
+3. Popolazioni non isolate con risorse limitate
+$\begin{cases} N'(t)=σN(t)-εN^2(t)+π(t) \begin{cases} π(t)>0 \text{ immigrazione} \\ π(t)<0 \text{ emigrazione}\end{cases}\\ N(0)=N_0 \end{cases}$
+### Preda-predatore, Modello di Lotka-Volterra
+$x(t)$ è il numero di prede
+$y(t)$ è il numero di predatori
+$\begin{cases}x'(t)=a\cdot x(t)-b\cdot x(t)y(t) \text{    a,b>0}\\ y'(t)=-c\cdot y(t)+d\cdot x(t)y(t) \text{     c>0}\\ x(0)=x_0 \\ y(0)=y_0 \end{cases}$
+### Modello di epidemie
+Malattia non mortale che non consente l'immunità
+$I(t)$ numero di infetti
+$S(t)$ numero di suscettibili alla malattia
+![Modelli di epidemie](../ModelliEpidemie.png)
+$\begin{cases}I'(t)=βI(t)S(t) \\ S'(t)=-βI(t)S(t)\end{cases}$
+$\begin{cases}I'(t)=βI(t)(N-I(t)) \\ I(0)=I_0\end{cases}$
 
 
