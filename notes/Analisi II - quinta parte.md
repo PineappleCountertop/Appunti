@@ -1,11 +1,10 @@
 ---
 attachments: [Clipboard_2020-01-09-18-57-21.png, Coordpolari.svg, Coorpolari.jpg, EDOlineari.png, ModelliEpidemie.png, ModelliMatematici.png, ModelloMalattiaMortale.png]
 favorited: true
-pinned: true
 tags: [Analisi II]
 title: Analisi II - quinta parte
 created: '2020-01-06T13:23:39.864Z'
-modified: '2020-01-11T16:22:45.959Z'
+modified: '2020-01-13T10:35:43.152Z'
 ---
 
 # Analisi II - quinta parte
@@ -291,4 +290,33 @@ Si ha
 (o) $y'=a(x)y+b(x)\Leftrightarrow L(y(\cdot))=0\Leftrightarrow y(\cdot)\in L^{-1}({0})=S_0=Ker(L)$
 ![EDO lineari](../EDOlineari.png)
 ### Teorema 2 - descrizione di $S_b$
+Le soluzioni di (c) sono tutte e sole le funzioni del tipo $y(\cdot)=\overline{y}(\cdot)+z(\cdot)$, dove $\overline{y}(\cdot)$ è una particolare soluzione di (c) e $z(\cdot )$ è una generica soluzione di (o), cioè $S_b=\overline{y}(\cdot)+S_0$
+### Dimostrazione
++ se $y(\cdot)=\overline{y}(\cdot)+z(\cdot)$, si ha $L(y(\cdot))=L(\overline{y}(\cdot))+L(z(\cdot))=b(\cdot)+0=b(\cdot)$
++ se $y(\cdot),\overline{y}(\cdot)$ sono soluzioni di (c), allora, posto $z(\cdot)=y(\cdot)-\overline{y}(\cdot)$. Si ha $L(z(\cdot))=L(y(\cdot))-L(\overline{y}(\cdot))=b(\cdot)-b(\cdot)=0$, cioè $z(\cdot)$ è soluzione di (o)
+### Teorema 3 (descrizione di $S_0=KerL$)
+$S_0=KerL=\{c\cdot e^{A(\cdot)}:c\in \mathbb{R}\}$ con $A(\cdot)$ una primitiva di $a(\cdot)$ su $I$ (cioè $A'(x)=a(x)$ in $I$)
+### Dimostrazione
+$\{c\cdot e^{A(\cdot)}:c\in \mathbb{R}\}\subseteq KerL$
+Posto $z(\cdot)=ce^{A(x)}\cdot A'(x)=a(x)z(x)$ in $I$. $z(\cdot)$ è soluzione di (o).
+$KerL\subseteq \{ce^{A(\cdot)}:c\in \mathbb{R}\}$. Sia $z(\cdot)$ una soluzione di (o), cioè $\forall x\in I$, $z'(x)=a(x)z(x)$ e quindi $\underbrace{z'(x)e^{-A(x)}-a(x)e^{-A(x)}z(x)}_{\frac{d}{dx}(z(x)e^{-A(x)})}=0$.
+Cioè ${\frac{d}{dx}(z(x)e^{-A(x)})}=0$. Dunque esiste $c\in \mathbb{R}$ t.c. $z(x)e^{-A(x)}=c$ in $I$. Si conclude così che $z(x)=ce^{A(x)}$ in $I$.
+#### NB $dimKerL=1$
+### Teorema 4 (Determinazione di una soluzione particolare di (c) )
+Una soluzione particolare di (c) è $\overline{y}(x)=e^{A(x)}\int_{x_0}^xe^{-A(t)}b(t)dt$, con $x_0\in I$ finito
+### Dimostrazione (Metodo della variazione delle costanti)
+Si cerca una soluzione particolare di (c) del tipo $\overline{y}(\cdot)=c(x)e^{A(x)}$, con $c(\cdot):I\to \mathbb{R}$, funzione di classe $C^1$ da determinare. Imponiamo che $y(\cdot)$ risolva (c), cioè $\overline{y}(\cdot)=a(x)\overline{y}(\cdot)+b(x)$ in $I$ $\Leftrightarrow$ $c'(x)e^{A(x)}+c(x)a(x)e^{A(x)}=a(x)c(x)e^{A(x)}+b(x)$ in $I$ $\Leftrightarrow$ $c'(x)=b(x)e^{-A(x)}$ in $I$. Fissiamo $x_0\in I$ e poniamo $c(x)=\int_{x_0}^xb(t)e^{-A(x)}dt$ in $I$.
+La funizione $\overline{y}(x)=e^{A(x)}|int_{x_0}^xe^{-A(t)}b(t)dt$ risolve (c)
+### Corollario 1
+La generica soluzione di (c) è $y(x)=ce^{A(x)}+e^{A(x)}\int_{x_0}^xe^{-A(t)}b(t)dt$, $\forall x\in I$, con $c\in \mathbb{R}$ e $x_0\in I$
+### Corollario 2
+$\forall x_0\in I$ e $y\in \mathbb{R}$ il PC $\begin{cases}y'=f(x,y)\\y(x_0)=y_0 \end{cases}$ ha una e una sola soluzione definita su $\mathbb{R}$ data da $y(x)=y_0\exists +\int_{x_0}^x e^{A(x)-A(t)}b(t)dt$
+### Teorema 5 (Principio di sovrapposizione)
+Se $y_1(\cdot)$ è una soluzione di $y'=a(x)y+b_1(x)$ e $y_2(\cdot)$ è una soluzione di $y'=a(x)y+b_2(x)$, allora $y_1(\cdot )+y_2(\cdot )$ è soluzione di $y'=a(x)y+[b_1(x)+b_2(x)]$
+### Dimostrazione
+Si ha $L(y_1(\cdot )+y_2(\cdot ))=L(y_1(\cdot))+L(y_2(\cdot))=b_1(\cdot)+b_2(\cdot)$
+### L'EDO di Bernoulli
+L'EDO $y'=a(x)y+b(x)y^γ$ con $a(\cdot),b(\cdot):I\to \mathbb{R}$, $I$ intervallo aperto, continua e $γ\in \mathbb{R}\setminus\{0,1\}$, si dice equazione di Bernoulli. Si cercano le soluzioni $y(\cdot)$ con $y(x)>0$ in $Dom(y(\cdot))$.
+Sia $y(\cdot)$ una soluzione e si divida per $y(\cdot)^γ$. Si ottiene $\displaystyle \frac{y'(x)}{y(x)^γ}=a(x)y(x)^{1-γ}+b(x)$ cioè $\displaystyle \frac{d}{dx}(\frac{1}{1-γ}y(x)^{1-γ})=(1-γ)a(x)(\frac{1}{1-γ}y(x)^{1-γ})+b(x)$, cambio di variabile (dipendente), si ponga $u(x)=\displaystyle \frac{1}{1-γ}y(x)^{1-γ}$. Allora l'EDO diventa: $u'(x)=(1-γ)a(x)u(x)+b(x)$ che è un EDO lineare del $I$ ordine
+
 
