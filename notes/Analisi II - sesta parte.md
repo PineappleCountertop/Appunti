@@ -1,9 +1,9 @@
 ---
-pinned: true
+attachments: [Lotka-Volterra.png]
 tags: [Analisi II]
 title: Analisi II - sesta parte
 created: '2020-01-13T10:35:45.970Z'
-modified: '2020-01-16T11:17:40.191Z'
+modified: '2020-01-16T16:47:55.314Z'
 ---
 
 # Analisi II - sesta parte
@@ -179,7 +179,7 @@ Siano $λ_1,λ_2\in \mathbb{R}$ soluzioni di (k), con $λ_1\neq λ_2$, allora $e
 Se $λ_2\to λ_1$, allora $\displaystyle \frac{e^{λ_1x}-e^{λ_2x}}{λ_1-λ_2}=e^{λ_1x}\cdot \frac{1-{e^{-(λ_1-λ_2)x}}}{λ_1-λ_2}=e^{λ_1x}=\left(\frac{e^{-(λ_1-λ_2)x}}{-(λ_1-λ_2)x}\right)x\to e^{λ_1x}x$, se $t=-(λ_1-λ_2)\to 0$, $\frac{e^{t-1}}{t}\to 1$
 ### Dimostrazione teorema 3b
 Dal teorema  3a segue che $dimS_0=2$. Quindi basta verificare che le funzioni considerate sono linearmente indipendenti.
-+ Caso (1)
++ Caso (1)  
   Siano $c_1,c_2\in \mathbb{R}$ t.c. $c_1e^{λ_1x}+c_2e^{λ_2x}=0$, $\forall x\in \mathbb{R}$. Derivando si ottiene $λ_1c_1e^{λ_1x}+λ_2c_2e^{λ_2x}=0$, $\forall x\in \mathbb{R}$
   Valutando in $x=0$, si ha:
   $\begin{cases}c_1+c_2=0\\ λ_1c_1+λ_2c_2=0\end{cases}$,  $det\begin{pmatrix}1 & 1\\ λ_1 & λ_1\end{pmatrix}=λ_2-λ_1\neq 0$
@@ -196,17 +196,55 @@ $y'=ay$, $a\in \mathbb{R}$, $G(x,t)=e^{ax}x^{-at}=e^{a(x-t)}$
 ### Metodo di somiglianza
 Sia $c(x)=P(x)e^{λx}$, $P\in \mathbb{R}[x]$ e $λ\in \mathbb{R}$. Si cerca una soluzione particolare di (c) del tipo $\overline{y}(x)=Q(x)e^{λx}\in \mathbb{R}[x]$
 1. Se $λ\in \mathbb{R}$ __non__ è radice di (k), allora $degQ=degP$
-2. se $λ\in \mathbb{R}$ è radice di (k) di molteplicità $\nu\in \{1,2\}$, allora $Q(x)=x^\nuR(x)$, con $R\in \mathbb{R}[x]$ e $degR=degQ$
+2. se $λ\in \mathbb{R}$ è radice di (k) di molteplicità $\nu\in \{1,2\}$, allora $Q(x)=x^\nu R(x)$, con $R\in \mathbb{R}[x]$ e $degR=degQ$
 
-Sia $c(x)=P(x)e^{αx}cosβx$ (o $P(x)e^{αx}sinβx$) con $P\in \mathbb{R}[x]$ e $α,β\in \mathbb{R}$, $β\neq 0$. Si cerca una soluzione particolare di (c) del tipo $\overlnie{y}(x)=Q_1(x)e^{αx}cos(βx)+Q_2(x)e^{αx}sin(βx)$, con $Q_1,Q_2\in \mathbb{R}[x]$
+Sia $c(x)=P(x)e^{αx}cosβx$ (o $P(x)e^{αx}sinβx$) con $P\in \mathbb{R}[x]$ e $α,β\in \mathbb{R}$, $β\neq 0$. Si cerca una soluzione particolare di (c) del tipo $\overline{y}(x)=Q_1(x)e^{αx}cos(βx)+Q_2(x)e^{αx}sin(βx)$, con $Q_1,Q_2\in \mathbb{R}[x]$
 1. Se $α+iβ\in \mathbb{C}$ __non__ è radice di (k) allora $degQ_1=degP$
 2. SE $α+iβ\in \mathbb{C}$ è radice di (k) (necessariamente di molteplicità $1$), allora $Q_1(x)=xR_1(x)$ e $Q_2(x)=xR_2(x)$, con $R_1,R_2\in \mathbb{R}[x]$ e $degR_1=degR_2=degP$
 ### Teorema 5 (principio di sovrapposizione)
 Sia $y_1(\cdot)$ soluzione di $y''+ay'+by=c_1(x)$ e sia $y_2(\cdot)$ soluzione di $y''+ay'+by=c_2(x)$, allora $y(\cdot)=y_1(\cdot)+y_2(\cdot)$ è soluzione di $y''+ay'+by=(c_1(x)+c_(x))$
 ### Dimostrazione
 Segue dalla linerarità di $L$
+### Metodo risolutivo
+Sia $(x(\cdot),y(\cdot))$ una soluzione che risulta essere di classe $C^2$, si hanno due casi:
+1. $b\cdot c=0$
+Sia, per esempio, $b=0$. Si ha
+$\begin{cases}x'(t)=ax(t)+f(t)\text{   equazione disaccoppiata da }y\\y'(t)=cy(t)+(cx(t)+g(t)) \end{cases}$
+Risolvo $x(t)$ e la metto nella seconda riga che mi ritorna un'equazione risolvibile
+Si risolve la $I$ equazione e si inserisce la soluzione $x(\cdot)$ nella $II$ equazione. La coppia così costruita è la soluzione generale del sistema.
+2. $b\cdot c\neq 0$
+(s) $\begin{cases}x'(t)=ax(t)+by(t)+f(t)\\ y'(t)=cx(t)+dy(t)+g(t)\end{cases}$, equazione accoppiata.
+Si deriva, per esempio, la $I$ equazione, si ottiene: $x''(t)=ax'(t)+by'(t)+f'(t)=ax'(t)+bcx(t)+d(x'(t)-ax(t)-f(t))+bg(t)+f'(t)$ e quindi 
+(E): $x''(t)-\underbrace{(a+d)}_{tx(\mathbb{A})=\sum_i a_{ii}}x'(t)+(\underbrace{ad-bc}_{det(\mathbb{A})})x(t)=bg(t)-df(t)-f'(t)$.
+Sia $x(\cdot)$ la soluzione generale di (E), si ha
+$y(\cdot)=\displaystyle \frac{1}{b}(x'(\cdot )-ax(\cdot)-f(\cdot))$. La coppia $(x(\cdot),y(\cdot))$ è la soluzione generale di (S)
+### Sistema di Lotka-Volterra
+1. Senza prelievo esterno
+$\begin{cases}x'=ax-bxy\\y'=cxy-dy \end{cases}$, dove $\begin{aligned}x=x(t)\text{ numero di prede al tempo }t\text{    }\\y=y(t)\text{ numero di predatori al tempo }t \end{aligned}$
+con $a,b,c,d\in \mathbb{R}^+$
+Si cerca $γ(t):I\to \mathbb{R}^2$, $γ(t)=(x(t),y(t))^T$, t.c. posto $g:\mathbb{R}^2\to \mathbb{R}^2$, $g(x,y)=(ax-bxy,cxy-dy)^T$
+$γ'(t)=g(γ(t))$, $γ$ linea di campo del campo vettoriale $g$.
+$\displaystyle g(\frac{d}{c},\frac{a}{b})=\underline{0}$, il punto $\displaystyle (\frac{d}{c},\frac{a}{b})$ è un equilbrio, cioè è una soluzione costante del sistema, le traiettorie "circolano" vicino al punto di equilibrio
+![Lotka-Volterra](../Lotka-Volterra.png)
 
+$\begin{cases}\displaystyle x\frac{x'}{y}=\frac{a}{y}-b /\cdot -y'\\ x\frac{y'}{y}=c-\frac{d}{y} /\cdot +x'\end{cases}$; sommando le due equazione si ottiene:
+$\displaystyle 0=\frac{a}{y}y'-by'-\frac{d}{x}x'+cx'$
+$\displaystyle 0=\frac{d}{dt}(-alogy+by-dlogy+cx)$, quindi $-alog(y(\cdot))-dlog(x(\cdot))+cx(\cdot)+dy(\cdot)=K$.
+Ponendo $f(x,y)=-dlogx-alogy+cx+by$ si ha che $y(\cdot)$ parametrizza una linea di livello di $f$:
+$\displaystyle L_k(f)=\{(x,y)^T:f(x,y)=K\}$, $\nabla f(x,y)=(-\frac{d}{x}+c,-\frac{a}{y}+b)^T=\underline{0}\Leftrightarrow (x,y)^T=(\frac{d}{c},\frac{a}{b})^T$
+$Hf(x,y)=\displaystyle \begin{pmatrix}\frac{d}{x^2} & 0\\0 & \frac{a}{y^2} \end{pmatrix}$, $Hf(x,y)$ è definita positiva, quindi $(\frac{d}{c},\frac{a}{b})^T$ è un punto di minimo.
+Poichè $f$ è "coerciva", nel $I$ quadrante, $(\frac{d}{c},\frac{a}{b})^T$ è il punto di minimo assoluto per $f$.
+Le linee di livello di $f$ sono curve chiuse e quindi $x(\cdot)$ e $y(\cdot)$ sono funzioni $T$-periodiche per qualche $T>0$ (che dipende dalla funzione $y(\cdot)$).
+Si ha $\int_{0}^T \displaystyle\frac{x'(t)}{x(t)}dt=\int_0^T (a-by(t))dt\Leftrightarrow log(x(T))-log(x(0))=0=\int_{0}^T adt-b\int_{0}^T y(t)dt=0 /\cdot \frac{b}{T}$
+$\Rightarrow\displaystyle \frac{1}{T}\int_{0}^Ty(t)dt=\frac{a}{b}$ e
+$\displaystyle \int_0^T \frac{y'(t)}{y(t)}dt=\int_{0}^{T} (cx(t)-d)dt\Rightarrow\displaystyle \frac{1}{T}\int_{0}^Tx(t)dt=\frac{d}{c}$
+Le due medie integrali sono il numero medio di individui (prede/predatori) su un periodo $T$
+2. Con prelievo esterno (pesca selettiva)
+$\begin{cases}x'=ax-bxy-ε_{1}x\\y'=cxy-dy-ε_2y \end{cases}$, con $0<ε_1<a$ e $ε_2>0$
+$\begin{cases}x'=(a-ε_1)x-bxy\\y'=cxy-(d+ε_2)y) \end{cases}$
+Il nuovo equilibrio si trova in $\displaystyle \left(\frac{d+ε_2}{c},\frac{a-ε_1}{b}\right)$
+Paradosso: si ha $\displaystyle \begin{cases}\displaystyle \frac{1}{T}\int_{0}^T x(t)dt=\frac{d+ε_2}{c}\to \text{aumento delle prede}\\ \displaystyle \frac{1}{T}\int_{0}^T ys(t)dt=\frac{a-ε_1}{b}\to \text{diminuzione dei predatori} \end{cases}$
 
-
-
+$\overline{g}(x,y)=g(\frac{d}{c},\frac{a}{b})+Jg(\frac{d}{c},\frac{a}{b})\begin{pmatrix}x+\frac{d}{c}\\ y-\frac{a}{b}\end{pmatrix}\to$ Sistema linearizzato
+$γ'(t)=\overline{g}(γ(t))$
 
