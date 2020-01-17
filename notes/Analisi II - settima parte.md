@@ -4,7 +4,7 @@ pinned: true
 tags: [Analisi II]
 title: Analisi II - settima parte
 created: '2020-01-16T16:47:57.592Z'
-modified: '2020-01-17T17:43:10.129Z'
+modified: '2020-01-17T19:23:23.040Z'
 ---
 
 # Analisi II - settima parte
@@ -171,5 +171,26 @@ Sia $T\subseteq \mathbb{R}^n$. Si ha che $T$ è trascurabile in $\mathbb{R}^n$ s
 #### Teorema
 Se $f:R(\subseteq \mathbb{R}^n)\to \mathbb{R}$, $R$ $n$-rettangolo, è limitata e continua su $R\setminus T$, con $m_n(T)=0$, allora $f$ è integrabile su $R$.
 #### Teorema (caratterizzazione degli insiemi misurabili in $\mathbb{R}^n$)
-
-
+Sia $E\subseteq \mathbb{R}^n$ un insieme limitato. Si ha che $E$ è misurabile in $\mathbb{R}^n$ se e solo se $m_n(frE)=0$
+#### Dimostrazione
+Proviamo solo che se $m_n(frE)=0$, allora $E$ è misurabile in $\mathbb{R}^n$.
+Sia $R$ un $n$-rettangolo con $E\subseteq R$.
+La funzione caratteristica $\mathcal{X}_E$ è limitata su $R$ e continua su $R\setminus frE$. Dunque $\mathcal{X}_E$ è integrabile e pertanto $E$ è misurabile in $\mathbb{R}^n$.
+### Condizione di integrabilità su insiemi limitati
+Se $f:E(\subseteq \mathbb{R}^n)\to \mathbb{R}$ è continua su $E$, compatto, misurabile, allora $f$ è integrabile su $E$.
+### Dimostrazione
+Poichè $f$ è continua su $E$ compatto, $f$ è limitata su $E$.
+Sia $R$ un $n$-rettangolo con $E\subseteq R$ e sia $f_0:R\to R$ definita da $f_0(\underline{x})=\begin{cases}f(\underline{x}),\underline{x}\in E \\0, \underline{x}\in R\setminusE \end{cases}$.
+$f_0$ è limitata su $R$ ed è continua su $R\setminus frE$, con $m_n(frE)=0$, essendo $E$ misurabile in $\mathbb{R}^n$. Quindi $f_0$ è integrabile su $R$ e perciò $f$ è integrabile su $E$
+### Proprietà dell'integrale su insiemi misurabili
++ Linearità
++ Monotonia
++ Integrale del prodotto
++ Integrale del valore assoluto
++ Proprietà della media
+Se $f:E(\subseteq \mathbb{R}^n)\to \mathbb{R}$ è integrabile su $E$ misurabile allora $\underset{E}{inf}f\le \displaystyle \frac{\int_Ef}{m_n(E)}\le \undeset{E}{sup}f$
+Se risulta $E$ insieme compatto e connesso, allora $\exists \underline{x}^0\in E$ t.c. $f(\underline{x}^0)=\displaystyle \frac{\int_{E}f}{m_n(E)}$
++ Integrale rispetto al dominio
+Se $A,B,C(\subseteq \mathbb{R}^n)$ sono insiemi misurabili tali che $C=A\cup B$ e $m_n(A\cap B)=0$ e $f:C\to \mathbb{R}$ è t.c. $f_{|_A}$ è integrabile su $A$ e $f_{|_B}$ è integrabile su $B$, allora $f$ è integrabile su $C$ e $\int_Cf=\int_Af+\int_Bf$
++ Integrale della restrizione
+Se $f:A(\subseteq \mathbb{R}^n)\to \mathbb{R}$ è integrabile su $A$ misurabile e $B\subseteq A$ è misurabile allora $f_{|_B}$ è integrabile su $B$
