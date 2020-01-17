@@ -1,9 +1,10 @@
 ---
 attachments: [IntegCorda.png, IntegE.png, IntegER3.png, IntegSezioni.png]
+pinned: true
 tags: [Analisi II]
 title: Analisi II - settima parte
 created: '2020-01-16T16:47:57.592Z'
-modified: '2020-01-17T13:12:58.183Z'
+modified: '2020-01-17T17:43:10.129Z'
 ---
 
 # Analisi II - settima parte
@@ -126,3 +127,49 @@ $E=\{(x,y)^T:0<y<x^2 \wedge y\le 1-x\}$
 Come calcolare il volume di $E$?
 $E=\{(x,y,z)^T:x^2+y^2\le 1+z^2, 0\le z\le 4\}$
 ![Volume di E](../IntegER3.png)
+### Integrazione di funzione limitate su insiemi limitati
+Sia $E(\subseteq \mathbb{R}^n)$, un insieme limitato e sia $f:E\to \mathbb{R}$ una funzione limitata.
+Sia $R$ un $n$-rettangolo t.c. $E\subseteq R$
+Si ponga $f:0:R\to \mathbb{R}$ con $f_0(\underline{x})f_0(\underline{x})=\begin{cases}f(\underline{x}), \underline{x}\in E\\x, \underline{x}\in R\setminus E \end{cases}$
+Si dice che $f$ è integrabile su $E$ se la funzione $f_0$ è integrabile su $R$ e si pone $\displaystyle \int_{E}f=\int_Rf_0$
+### Osservazione
+La definizione non dipende da particolare $n$-rettangolo $R$ con $E\subseteq R$
+#### Problema
+In generale, anche se $f$ è continua in $E$ $f_0$ può essere discontinua su $R$.
+Come stabilire, allora l'integrabilità di $f_0$ su $R$?
+Bisogna trarre condizioni più generali della continuità che garantiscano l'integrabilità su $n$-rettangoli
+### Teoria della misura secondo Peano-Jordan
+#### Insieme misurabile
+Sia $E\subseteq  \mathbb{R}^n$ un insieme limitato, si dice che $E$ è misurabile (secondo P-J) in $\mathbb{R}^n$ se la funzione $1$ è integrabile su $E$ e si pone $m_n=\int_E1$
+### Osservazione
+Funzione caratteristica di un insieme:
+Sia $E(\subseteq  \mathbb{R}^n)$ la funzione $\Chi_E:\mathbb{R}^n\to \mathbb{R}$ definita da $\Chi_E(\underline{x})=\begin{cases}1, \underline{x}\in E\\ \underline{x}\notin E \end{cases}$. Si dice funzione caratteristica di $E$
+### Osservazione
+Un insieme $E(\subseteq  \mathbb{R}^n)$ limitato è misurabile se e solo se $\Chi(E)$ è integrabilie su un $n$-rettangolo $R\supseteq E$
+### Definizione
+$\mathscr{M}(\mathbb{R}^n)=\{E\subseteq \mathbb{R}^n:E$ è misurabile in $\mathbb{R}^n\}$ e $m_n:\mathscr{M}(\mathbb{R}^n)\to \mathbb{R}$, con $m_n(E)=\int_E1$
+### Proprietà della misura
+1. Se $A,B\in \mathscr{M}(\mathbb{R}^n)$, allora $A\cap B,A\cup B, A\setminus B\in \mathscr{M}(\mathbb{R}^n)$
+  + Dimostrazione. Poichè $A,B\in \mathscr{M}(\mathbb{R}^n)$, $\mathcal{X}_A$, $\mathcal{X}_B$ sono integrabili in $R$. Si ha: $\mathcal{X}_{A\cap B}=\mathcal{X}_A\cdot \mathcal{X}_B$, che è integrabile in $R$.
+  Si ha $\displaystyle \mathcal{X}_{A\cup B}=\mathcal{X}_A+\mathcal{X}_B-\mathcal{X}_{A\cap B}$ che è integrabile su $R$ e inoltre $\displaystyle \int_R \mathcal{X}_{A\cup B}=\int_R\mathcal{X}_A+\int_R\mathcal{X}_B-\int_R\mathcal{X}_{A\cap B}$. quindi $m_n(A\cup B)=m_n(A)+m_n(B)-m_n(A\cap B)$.
+  Si ha $\displaystyle \mathcal{X}_{A\setminus B}=\mathcal{X}_A-\mathcal{X}_{A\cap B}$ e $\displaystyle \int_R\mathcal{X}_{A\setminus B}=\int_R\mathcal{X}_A-\int_R\mathcal{X}_{A\cap B}$, $m_n(A\setminus B)=m_n(A)-m_n(A\cap B)$
+2. Se $A,B\in \mathscr{M}(\mathbb{R}^n)$ e $A\subseteq B$. aòòpra $m_n(A)\le m_n(B)$.
+  + Dimostrazione. Se $A\subseteq B$, allora $\forall \underline{x}\in R$ si ha $\mathcal{X}_1(\underline{x})\le \mathcal{X}_2(\underline{x})$ e quindi $\int_R\mathcal{X}_A\le \int_R\mathcal{X}_B$
+### Insieme di misura nulla o insieme trascurabile
+Sia $T(\subseteq \mathbb{R}^n)$ limitato. Si dice che $T$ è __trascurabile in__ $\mathbb{R}^n$ (o di misura nulla) se $m_N(T)=0$
+### Proposizione (caratteristica dell'insieme trascurabile)
+Sia $T\subseteq \mathbb{R}^n$. Si ha che $T$ è trascurabile in $\mathbb{R}^n$ se e solo se $\forall ε>0\exists R_1,..,R_k$ $n$-rettangoli tali che $\displaystyle T\subseteq \bigcup_{i=1}^kR_i$ e $\displaystyle\sum_{i=1}^km_n(R_i)<ε$
+### Proprietà
+1. Se $T=\{\underline{x}^0\}\subseteq \mathbb{R}^n$, allora $m_n(T)=0$, $\forall n\ge 1$
+2. Se $T=\{\underline{x}^1,...,\underline{x}^n\}\subseteq \mathbb{R}^n$, allora $m_n(T)=0$ $\forall n\ge 1$
+3. Se $T\subseteq \mathbb{R}^n$ è un $1$-rettangolo, allora $m_n(T)=0$ $\forall n\ge 2$
+4. Se $T\subseteq \mathbb{R}^n$ è un $2$-rettangolo, allora $m_n(T)=0$ $\forall n\ge 3$
+5. Se $φ:R(\subseteq \mathbb{R}^n)\to \mathbb{R}$ è integrabile sul $n$-rettangolo $R$, allora $G(φ)=\{(\underline{x},φ(\underline{x}):\underline{x}\in R\}\subseteq \mathbb{R}^n$
+  + Dimostrazione. Caso $n=1$. Poichè $φ:R=[a,b]\to \mathbb{R}$ è integrabile $sup s(δ,φ)=infS(δ,φ)$. Fissato $ε>0$, Esiste $δ\in \Delta(R)$ t.c. $ε>S(δ)-s(δ)=\sum_{i=1}^k L_i(x_i-x_{i-1})-\sum_{i=1}^k l_i(x_i-x_{i-1})$. $R_i=[x_{i-1},x_i]\times [l_i,L_i]$, per $i=1,...,k$, t.c. $G(φ)=R_1\cup R_2\cup ...R_k$
+
+### Condizione di integrabilità su $n$-rettangoli
+#### Teorema
+Se $f:R(\subseteq \mathbb{R}^n)\to \mathbb{R}$, $R$ $n$-rettangolo, è limitata e continua su $R\setminus T$, con $m_n(T)=0$, allora $f$ è integrabile su $R$.
+#### Teorema (caratterizzazione degli insiemi misurabili in $\mathbb{R}^n$)
+
+
