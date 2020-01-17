@@ -1,9 +1,9 @@
 ---
-pinned: true
+attachments: [IntegCorda.png, IntegE.png, IntegER3.png, IntegSezioni.png]
 tags: [Analisi II]
 title: Analisi II - settima parte
 created: '2020-01-16T16:47:57.592Z'
-modified: '2020-01-16T17:40:10.191Z'
+modified: '2020-01-17T13:12:58.183Z'
 ---
 
 # Analisi II - settima parte
@@ -19,7 +19,7 @@ Per $i=1,...,n$ e $j=1,...,m$ si pone $R_{ij}=[x_{i-1},x_i]\times [y_{j-1},y_j]$
 #### Insieme delle decomposizioni di $R$
 Sia $f$ una funzione __limitata__, $-\infty<l=\underset{R}{inf}f\le L=\underset{R}{sup}f<+\infty$.
 Si pone $\Delta(R)=\{δ:δ\text{ è decomposizione di }R\}\leftarrow$ è l'insieme delle decomposizioni.
-### Somme superiori e somme inferiori
+### Somme inferiori e somme superiori
 Sia una $δ\in \Delta(R)$
 $\sum_{j=1}^m\sum_{i=1}^n l_{ij}\cdot m_2(R_{ij}=s(δ,f)\to$ __Somma inferiore__,
 $l_{ij}=\underset{R-{ij}}{inf}f\to$ altezza, misurata fino al minimo della funzione in quell'area
@@ -34,7 +34,95 @@ $\forall δ_1,δ_2\in \Delta(R)$, si ha $\mathbb{s}(δ_1,f)\le \mathbb{S}(δ_2,f
 #### Conseguenza
 Le classi
 $σ(f)=\{s(δ,f):δ\in \Delta(R)\}$ e
-$\Sigma(f)=\{\mathbb{S}(δ,f):δ\in \Delta(R)\}$ sono classi separate, al limite diventano contigue
-Il numero separatore si chiama integrale secondo Riemann
+$\Sigma(f)=\{\mathbb{S}(δ,f):δ\in \Delta(R)\}$ sono classi separate
 ### Integrale secondo Riemann su un rettagolo in $\mathbb{R}^2$
+Se $σ(f)$ e $\Sigma(f)$ sono classi contigue, cioè $supσ(f)=inf\Sigma(f)$, allora si dice che $f$ è integrabile su $R$ e si pone $\int\int_Rf(x,y)dxdy=supσ(f)=inf\Sigma(f)$
+#### Significato geometrico
+Sia $f:R(\subseteq\mathbb{R}^2)\to\mathbb{R}$, integrabile su $R$ e $f(x,y)>0$ in $R$.
+Si pone $T=\{(x,y,z)^T\in R, 0<z\le f(x,y)\}$. Si ha $m_3(T)=\int\int_Rf(x,y)dxdy$
+### Integrazione secondo Riemann su un parallelepipedo in $\mathbb{R}^3$
++ Sia $R=[a_1,b_1]\times [a_2,b_2]\times  [a_3,b_3]$
+#### Decomposizione di R
++ $a_1<x_0<x_1<...<x_n=b_1$ $n+1$ punti di $[a_1,b_1]$
++ $a_2<y_0<y_1<...<y_m=b_2$ $m+1$ punti di $[a_2,b_2]$
++ $a_3<z_0<z_1<...<z_m=b_3$ $l+1$ punti di $[a_3,b_3]$
+Per $i=1,..,.n$, $j=1,...,m$, $k=1,...,l$.
+La collezione $δ=\{R_{ijk}:i=1,..,.n, j=1,...,m, k=1,...,l\}$ si dice decomposizione di $R$.
+$\Delta(R)$ è l'insieme di tutte le composizioni di $R$
+### Somme inferiori e somme superiori
+Sia $δ$ una decomposizione di $R$, $δ\in \Delta(R)$, si pone
+$\sum_{k=1}^l\sum{j=1}^m\sum_{i=1}^n l_{ijk}m_3(R_{ijk})=s(δ,f)$
+$\sum_{k=1}^l\sum{j=1}^m\sum_{i=1}^n L_{ijk}m_3(R_{ijk})=S(δ,f)$
+dove $l_{ijk}=\underset{R_{ijk}}{inf}f\le L_{ijk}=\underset{R_{ijk}}{sup}f$ e $m_3(R_{ijk})=(x_i-x_{i-1})(y_j-y_{j-1})(z_k-z_{k-1})$, per $i=1,..,.n$, $j=1,...,m$, $k=1,...,l$.
+### Proposizione
+$\forall δ_1,δ_2\in \Delta(R)$ si ha $s(δ_1,f)\le S(δ_2,f)$
+#### Conseguenza
+Le classi
+$σ(f)=\{s(δ,f):δ\in \Delta(R)\}$ e
+$\Sigma(f)=\{\mathbb{S}(δ,f):δ\in \Delta(R)\}$ sono classi separate
+### Integrale secondo Riemann su un parallelepipedo su $R$
+Se $σ(f)$ e $\Sigma(f)$ sono contigue, cioè $supσ(f)=inf\Sigma(f)$, allora si dice che $f$ è integrabile su $R$ e si pone $\iiint_R f(x,y,z)dxdydz=supσ(f)=inf\Sigma(f)$
 
+### Rettangoli $n$-dimensionali ("$n$-rettangoli") e integrazione su $n$-rettangoli
+Se $n=1$, allora $R=[a,b]\subseteq \mathbb{R}$ è un rettangolo $1$-dimensionale, "$1$-rettangolo"
+Se $n=2$, allora $R=[a_1,b_1]\times[a_2,b_2]\subseteq \mathbb{R}^2$ è un rettangolo $2$-dimensionale, "$2$-rettangolo"
+...
+In generale $R=[a_1,b_1]\times [a_2,b_2]\times\dots\times [a_n,b_n]\subseteq \mathbb{R}^n$ è un rettangolo $n$-dimensionale, "$n$-rettangolo"
+La stessa costruzione fatta in precedenza permette di definire l'integrale di $f:R(\subseteq \mathbb{R}^n)\to \mathbb{R}$, con $R$ rettangolo limitato, si indica con $\int_Rf$
+### Condizioni di integrabilità
+Se $f:R(\subseteq\mathbb{R}^n)\to\mathbb{R}$, $R$ $n$-rettangolo, continua, allora $f$ è integrabile su $R$
+### Formula di riduzione
+#### Problema
+Come calcolare un integrale doppio o un integrale triplo?
++ $n=1$ se $f:R=[a,b](\subseteq \mathbb{R})\to \mathbb{R}$ è continua allora $\int_{a}^b f(x)dx=F(b)-F(a)$, per il teorema di Torricelli, con $F'=f$ in $R$
++ $n\ge 2$ si cerca di ridurre l'integrale doppio (triplo) a due (tre) successive integrazioni unidimensionali
+#### Formule di riduzione per integrali doppi su rettangoli
+##### Teorema di Fubini
+Se $f:R=[a,b]\times [c,d](\subseteq\mathbb{R}^2)\to\mathbb{R}$, è integrabile su $R$ e, per ogni $\overline{x}\in[a,b]$ $f(\overline{x},\cdot):[c,d]\to \mathbb{R}$ ($x$ fissato, $y$ libero), è integrabile su $[c,d]$, allora, posto $g(x)=\int_{c}^df(x,y)dy$, si ha che $g:[a,b]\to \mathbb{R}$ è integrabile, $\int_{a}^bg(x)dx=\iint_Rf(x,y)dxdy$, cioè $\underbrace{\int_a^b(\int_c^df(x,y)dy)dx}_{\text{integrale iterato}}=\underbrace{\iint_Rf(x,y)dxdy}_{\text{integrale doppio}}$, dove l'integrale doppio si ricava dalle somme inferiori e superiori
+##### NB
+Vale il risultato analogo in cui $x$ e $y$ si scambiano i ruoli nel teorema di Fubini:
+Se $f:R=[a,b]\times [c,d](\subseteq\mathbb{R}^2)\to\mathbb{R}$, integrabile su $R$ e $\forall \overline{y}\in [c,d]$ la funzione $f(\cdot ,\overline{y}):[a,b]\to \mathbb{R}$ è integrabile su $[a,b]$, allora, posto $h(y)=\int_a^bf(x,y)dx$, la funzione $h:[c,d]\to \mathbb{R}$ è integrabile su $[c,d]$ e $\int_c^d h(y)dy=\iint_Rf(x,y)dxdy$ cioè $\int_c^d(f(x,y)dx)dy=\iint_Rf(x,y)dxdy$
+##### Osservazione
+Se $f:R\to\mathbb{R}$, è continua allora valgono entrambe le versioni del teorema  di Fubini
+#### Formule di riduzione per integrazione su parallelepipedi rettangoli in $\mathbb{R}^3$
+Due strade percorribili:
+1. Integrazione per corda
+  ![Integrazione per corda](../IntegCorda.png)
+1. Integrazione per corda
+  ![Integrazione per sezione](../IntegSezioni.png)
+
+#### Riduzioni per corde
+##### Teorema di Fubini
+Se $f:R=[a_1,b_1]\times [a_2,b_2]\times[a_3,b_3]\to\mathbb{R}$, integrabile su $R$ e, $\forall (\overline{x},\overline{y})\in S=[a_1,b_1]\times [a_2,b_2]$ la funzione $f((\overline{x},\overline{y},\cdot$ è integrabile su $[a_3,b_3]$, allora posto $g(x,y)=\int_{a_3}^{b_3}f(x,y,z)dz$, la funzione $g:S\to \mathbb{R}$ è integrabile su $S$ e $\iint_Sg(x,y)dxdy=\iiint_Rf(x,y,x)dxdydz$, cioè $\iint_S(\int_{a_3}^{b_3}f(x,y,z)dz)dxdy=\iiint_Rf(x,y,z)dxdydz$
+Valgono analoghi gli altri risultati in cui le variabili si scambiano i ruoli
+#### Riduzione per sezione
+##### Teorema di Fubini
+Sia $f:R=[a_1,b_1]\times [a_2,b_2]\times[a_3,b_3]\to\mathbb{R}$, integrabile su $R$. $\forall \overline{z}\in [a_3,b_3]$ la funzione $f(\cdot ,\overline{z})$ è integrabile su $S=[a_1,b_1]\times [a_2,b_2]$, allora posto $h(z)=\\int_Sf(x,y,z)dxdy$, la funazione $h:[a_3,b_3]\to \mathbb{R}$ è integrabile su $[a_3,b_3]$ e $\int_{a_3}^{b_3}h(z)dz=\iiint_R f(x,y,z)dxdydz$, cioè $\int_{a_3}^{b_3}(\iint_Sf(x,y,z)dxdy)dz)=\iiint_Rf(x,y,z)dxdydz$.
+Valgono analoghi gli altri risultati in cui le variabili si scambiano i ruoli
+### Proprietà dell'integrale su $n$-rettangoli
+Sia $R(\subseteq\mathbb{R}^n)$ un $n$-rettangolo e si ponga $\mathscr{R}(R)=\{f_R\to \mathbb{R}$, $f$ integrabile su $R\}$.
++ Linearità
+Se $f,g\in \mathscr{R}(R)$ e $α,β\in \mathbb{R}$, allora $αf+βg\in \mathscr{R}(R)$ e $\int_R(αf+βg)=α\int_Rf+β\int_Rg$
+#### NB
+$\mathscr{R}(R)$ è uno spazio vettoriale e l'integrale è un'applicazione lineare
++ Monotonia
+Se $f,g\in \mathscr{R}(R)$ e $f(\underline{x})\le g(\underline{x})$ $\forall \underline{x}\in R$, allora $\int_Rf\le \int_Rg$
+### Integrale del prodotto
+Se $f,g\in \mathscr{R}(R)$, allora $f\cdot g\in \mathscr{R}(R)$
+### Integrale del valore assoluto
+Se $f\in \mathscr{R}(R)$, allora $|f|\in \mathscr{R}$ e $|\int_Rf|\le \int_R|f|$
+### Proprietà della media
+Se $f\in \mathscr{R}(R)$, allora 
+$\displaystyle \underset{R}{inf}f=l<\frac{\int_Rf}{m_n(R)}<L=\underset{R}{sup}f$
+Inoltre se $f$ è continua, allora esiste $\underline{x}^0\in R$ t.c. $\displaystyle \underbrace{f(\underline{x}^0)}_{Valor medio}=\underbrace{\frac{\int_Rf}{m_n(R)}}_{media integrale}$
+### Integrale della restrizione
+Se $f\in \mathscr{R}(R)$ e $R'\subseteq R$ è un $n$-rettangolo allora $f_{|_{R'}}\in \mathscr{R}(R')$
+### Additività rispetto al dominio
+Se $R,R',R''$ sono $n$-rettangoli tali che $R'\cup R''=R$ e $int(R')\cap int(R'')=\emptyset$ e $f:R\to \mathbb{R}$ t.c. $f_{|_{R'}}\in \mathscr{R}(R')$ e $f_{|_{R''}}\in \mathscr{R}(R'')$ allora $f\in \mathscr{R}(R)$ e $\int_Rf=\int_{R'}f+\int_{R''}f$
+### Insufficienza della teoria dell'integrazione su $n$-rettangoli
+Come definire l'area di $E$?
+$E=\{(x,y)^T:0<y<x^2 \wedge y\le 1-x\}$
+![Area di E](../IntegE.png)
+Come calcolare il volume di $E$?
+$E=\{(x,y,z)^T:x^2+y^2\le 1+z^2, 0\le z\le 4\}$
+![Volume di E](../IntegER3.png)
