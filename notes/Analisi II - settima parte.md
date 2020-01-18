@@ -4,7 +4,7 @@ pinned: true
 tags: [Analisi II]
 title: Analisi II - settima parte
 created: '2020-01-16T16:47:57.592Z'
-modified: '2020-01-18T12:52:42.120Z'
+modified: '2020-01-18T18:03:34.533Z'
 ---
 
 # Analisi II - settima parte
@@ -207,4 +207,30 @@ Ogni insieme normale è un compatto misurabile in $\mathbb{R}^2$
 Poichè $φ$ e $\psi$ sono integrabili su $[a,b]$, $G(φ)$ e $G(\psi)$ sono trascurabili in $\mathbb{R}^2$ e così pure i seguenti $σ_a$, $σ_b$. Dunque $m_2(frE)=0$ 
 ### Teorema
 Se $f:E(\subseteq \mathbb{R}^2)\to \mathbb{R}$ è continua ed $E$ e $\iint_Ef(x,y)dxdy=\int_a^b(\int_{φ(x)}^{\psi(x)}f(x,y)dy)dx$
+### Dimostrazione
+L'integrabilità di $f$ su $E$ segue dal teorema e dalla proposizione precedente
+Poniamo $m=\underset{[a,b]}{min}φ$ e $M=\underset{[a,b]}{max}\psi$ e $R=[a,b]\times [m,M]$
+$f_0:R\to \mathbb{R}$, dove $f_0(x,y)=\begin{cases}f(x,y), (x,y)^T\in E\\0, (x.y)^T\in R1setminus E \end{cases}$
+Si ha $f_0$ integrabile su $R$ e $f_0(\overline{x},\cdot):[m,M]\to\mathbb{R}$, è limitata e continua su $[m,M]\setminus[φ(\overline{x}),\psi(\overline{x})]$ e quindi integrabile. Il teorema di Fubini si può applicare e 
+$\displaystyle \iint_Rf_o(x,y)dxdy=\int_a^b (\int_m^M f(x,y)dy)dx=\int_a^b(\underbrace{\cancel{\int_{m}^{φ(x)}f_0(x,y)dy}}_{=0}+\int_{φ(x)}^{\psi(x)}f_0(x,y)dy+\underbrace{\cancel{\int_{\psi(x)}^{M}f_0(x,y)dy}}_{=0})dx=\int_a^b(\int_{φ(x)}^{\psi(x)}f_0(x,y)dy)dx$
+Vale un analogo risultato per gli insiemi normali rispetto all'asse $y$
+### Formule di riduzione per gli integrali tripli
+#### Riduzione per corde
+##### Insiemi normali in $\mathbb{R}^3$
+Siano $\Phi,\Psi:K(\subseteq \mathbb{R}^2)\to \mathbb{R}$ continue con $\Phi(x,y)\le \Psi(x,y)$ in $K$, con $K$ compatto e misurabile.
+L'insieme $E=\{(x,y,z)^T:(x,y)^T\in K, \Phi(x)\le z\le \Psi(x)\}$ si dice insieme normale rispetto al piano $xy$.
+Analogamente si definiscono insiemi normali rispetto ai piani $xz$ e $yx$
+##### Proposizione
+Ogni insieme normale è un compatto misurabile in $\mathbb{R}^3$.
+##### Teorema (integrazione per corde)
+Se $f:E(\subseteq \mathbb{R}^3)\to\mathbb{R}$ è continua e $E$ èun insieme normale rispetto al piano $xy$, allora $f$ è integrabile su $E$ e $\iiint_Ef(x,y,z)dxdydz=\iint_K(\int_{\Phi(x)}^{\Psi(x)}f(x,y,z)dz)dxdy$.
+Valgono analoghe le formule per insiemi normali rispetto agli altri due piani
+#### Riduzione per sezioni
+##### Insiemi sezionabili in $\mathbb{R}^3$
+Sia $E$ un compatto misurabile in $\mathbb{R}^3$. Si dice che $E$ è un insieme sezionabile in $\mathbb{R}^3$ rispetto all'asse $z$ se posto $m=min\{z:(x,y,z)^T\in E\}$ e $M=max\{z:(x,y,z)^T\in E\}$. $\forall \overline{z}\in[m,M]$, la sezione $S_{\overline{z}}=\{(x,y)^T|(x,y,\overline{z})^T\in E\}$ sia misurabile in $\matthbb{R}^2$.
+Analogamente si definiscono gli insiemi sezionabili rispetto agli assi $x$ e $y$
+##### Teorema (integrazione per sezioni)
+Sia $f:E(\subseteq \mathbb{R}^2)\to\mathbb{R}$ è continua, con $E$ insieme sezionabile.
+Si ha $\iiint_E f(x,y,z)dxdydz=\int_m^M(\iint_{S_z}f(x,y,z)dxdy)dz$
+
 
