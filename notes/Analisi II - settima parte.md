@@ -4,7 +4,7 @@ pinned: true
 tags: [Analisi II]
 title: Analisi II - settima parte
 created: '2020-01-16T16:47:57.592Z'
-modified: '2020-01-17T19:23:23.040Z'
+modified: '2020-01-18T12:52:42.120Z'
 ---
 
 # Analisi II - settima parte
@@ -52,8 +52,8 @@ La collezione $δ=\{R_{ijk}:i=1,..,.n, j=1,...,m, k=1,...,l\}$ si dice decomposi
 $\Delta(R)$ è l'insieme di tutte le composizioni di $R$
 ### Somme inferiori e somme superiori
 Sia $δ$ una decomposizione di $R$, $δ\in \Delta(R)$, si pone
-$\sum_{k=1}^l\sum{j=1}^m\sum_{i=1}^n l_{ijk}m_3(R_{ijk})=s(δ,f)$
-$\sum_{k=1}^l\sum{j=1}^m\sum_{i=1}^n L_{ijk}m_3(R_{ijk})=S(δ,f)$
+$\displaystyle\sum_{k=1}^l\sum{j=1}^m\sum_{i=1}^n l_{ijk}m_3(R_{ijk})=s(δ,f)$
+$\displaystyle\sum_{k=1}^l\sum{j=1}^m\sum_{i=1}^n L_{ijk}m_3(R_{ijk})=S(δ,f)$
 dove $l_{ijk}=\underset{R_{ijk}}{inf}f\le L_{ijk}=\underset{R_{ijk}}{sup}f$ e $m_3(R_{ijk})=(x_i-x_{i-1})(y_j-y_{j-1})(z_k-z_{k-1})$, per $i=1,..,.n$, $j=1,...,m$, $k=1,...,l$.
 ### Proposizione
 $\forall δ_1,δ_2\in \Delta(R)$ si ha $s(δ_1,f)\le S(δ_2,f)$
@@ -188,9 +188,23 @@ $f_0$ è limitata su $R$ ed è continua su $R\setminus frE$, con $m_n(frE)=0$, e
 + Integrale del prodotto
 + Integrale del valore assoluto
 + Proprietà della media
-Se $f:E(\subseteq \mathbb{R}^n)\to \mathbb{R}$ è integrabile su $E$ misurabile allora $\underset{E}{inf}f\le \displaystyle \frac{\int_Ef}{m_n(E)}\le \undeset{E}{sup}f$
+Se $f:E(\subseteq \mathbb{R}^n)\to \mathbb{R}$ è integrabile su $E$ misurabile allora $\underset{E}{inf}f\le \displaystyle \frac{\int_Ef}{m_n(E)}\le \underset{E}{sup}f$
 Se risulta $E$ insieme compatto e connesso, allora $\exists \underline{x}^0\in E$ t.c. $f(\underline{x}^0)=\displaystyle \frac{\int_{E}f}{m_n(E)}$
 + Integrale rispetto al dominio
 Se $A,B,C(\subseteq \mathbb{R}^n)$ sono insiemi misurabili tali che $C=A\cup B$ e $m_n(A\cap B)=0$ e $f:C\to \mathbb{R}$ è t.c. $f_{|_A}$ è integrabile su $A$ e $f_{|_B}$ è integrabile su $B$, allora $f$ è integrabile su $C$ e $\int_Cf=\int_Af+\int_Bf$
 + Integrale della restrizione
 Se $f:A(\subseteq \mathbb{R}^n)\to \mathbb{R}$ è integrabile su $A$ misurabile e $B\subseteq A$ è misurabile allora $f_{|_B}$ è integrabile su $B$
++ Invarianza dell'integrale rispetto agli insiemi di misura nulla
+Se $f_E(\subseteq \mathbb{R})\to \mathbb{R}$ integrabile su $E$ misurabile, $g:E\to \mathbb{R}$ è imitata e $f(\underline{x})=g(\underline{x})$ su $E\setminus T$ con $m_n(T)=0$, allora $g$ è integrabile su $E$ e $\int_{E}g=\int_{E}f$
+### Metodi per il calcol di integrali su insiemi limitati
+#### Formule di riduzione per integrali doppi
+#### Insiemi normali in $\mathbb{R}^2$.
+Siano $φ,\psi:[a,b]\to \mathbb{R}$ continue con $φ(x)\le \psi(x)$ in $[a,b]$ L'insieme $E=\{(x,y)^T:a\le x\le b, φ(x)\le y\le \psi(x)\}$ si dice insieme normale rispetto all'asse $x$, Analogamente si hanno insiemi normali rispetto all'asse $y$
+#### Proposizione
+Ogni insieme normale è un compatto misurabile in $\mathbb{R}^2$
+#### Dimostrazione
+È ovvio che $E$ è in compatto. Proviamo che è misurabile verificando che $frE$ è trascurabile in $\mathbb{R}^2$. Si ha $frE=G(φ)\cup G(\psi)\cup σ_a\cup σ_b$, con $σ_a=\{(a,y)^T:φ(a)\le y\le \psi(a)\}$ e $σ_b=\{(b,y)^T:φ(b)\le y\le \psi(b)\}$.
+Poichè $φ$ e $\psi$ sono integrabili su $[a,b]$, $G(φ)$ e $G(\psi)$ sono trascurabili in $\mathbb{R}^2$ e così pure i seguenti $σ_a$, $σ_b$. Dunque $m_2(frE)=0$ 
+### Teorema
+Se $f:E(\subseteq \mathbb{R}^2)\to \mathbb{R}$ è continua ed $E$ e $\iint_Ef(x,y)dxdy=\int_a^b(\int_{φ(x)}^{\psi(x)}f(x,y)dy)dx$
+
