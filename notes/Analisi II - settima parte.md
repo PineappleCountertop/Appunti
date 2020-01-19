@@ -1,10 +1,10 @@
 ---
-attachments: [IntegCorda.png, IntegE.png, IntegER3.png, IntegSezioni.png]
+attachments: [IntegCorda.png, IntegE.png, IntegER3.png, IntegSezioni.png, φ'.png]
 pinned: true
 tags: [Analisi II]
 title: Analisi II - settima parte
 created: '2020-01-16T16:47:57.592Z'
-modified: '2020-01-18T18:03:34.533Z'
+modified: '2020-01-19T11:17:33.799Z'
 ---
 
 # Analisi II - settima parte
@@ -227,10 +227,81 @@ Se $f:E(\subseteq \mathbb{R}^3)\to\mathbb{R}$ è continua e $E$ èun insieme nor
 Valgono analoghe le formule per insiemi normali rispetto agli altri due piani
 #### Riduzione per sezioni
 ##### Insiemi sezionabili in $\mathbb{R}^3$
-Sia $E$ un compatto misurabile in $\mathbb{R}^3$. Si dice che $E$ è un insieme sezionabile in $\mathbb{R}^3$ rispetto all'asse $z$ se posto $m=min\{z:(x,y,z)^T\in E\}$ e $M=max\{z:(x,y,z)^T\in E\}$. $\forall \overline{z}\in[m,M]$, la sezione $S_{\overline{z}}=\{(x,y)^T|(x,y,\overline{z})^T\in E\}$ sia misurabile in $\matthbb{R}^2$.
+Sia $E$ un compatto misurabile in $\mathbb{R}^3$. Si dice che $E$ è un insieme sezionabile in $\mathbb{R}^3$ rispetto all'asse $z$ se posto $m=min\{z:(x,y,z)^T\in E\}$ e $M=max\{z:(x,y,z)^T\in E\}$. $\forall \overline{z}\in[m,M]$, la sezione $S_{\overline{z}}=\{(x,y)^T|(x,y,\overline{z})^T\in E\}$ sia misurabile in $\mathbb{R}^2$.
 Analogamente si definiscono gli insiemi sezionabili rispetto agli assi $x$ e $y$
 ##### Teorema (integrazione per sezioni)
 Sia $f:E(\subseteq \mathbb{R}^2)\to\mathbb{R}$ è continua, con $E$ insieme sezionabile.
 Si ha $\iiint_E f(x,y,z)dxdydz=\int_m^M(\iint_{S_z}f(x,y,z)dxdy)dz$
-
-
+Valgono risultati analoghi per gli insiemi sezionabili rispetto agli assi $x$ e $y$.
+### Solidi di rotazione
+Siano $φ,\psi:[a,b]\to \mathbb{R}$ continue, con $0\le φ(z)\le \psi(z)$ e sia $D=\{(x,z)^T, a\le z\le b, φ(z)\le x\le \psi(z)\}$.
+Il solido $E=\{(x,y,z)^T:a\le z\le b, φ(z)\le \sqrt{x^2+y^2}\}\le \psi(z)$ ottenuto facendo ruotare di $2π$ $D$ intorno all'asse $z$ si dice solido di rotazione rispetto all'asse $z$.
+### $I$ Teorema di Pappo-Guldino
+Ogni solido di rotazione è un compatto misurabile (anzi, sezionabile rispeto all'asse $z$) e $m_3(E)=2πx_Bm_2(D)$, dove $x_b$ è l'ascissa del baricentro di $D$. ($S_z=\{(x,y)^T:φ(z)\le \sqrt{x^2+y^2}\le \psi(z)\}$)
+### Dimostrazione
+$E$ è misurabile rispetto all'asse $z$.
+$\displaystyle m_3(E)=\iiint_E1dxdydz=\int_a^b(\iint_{S_z}1dxdy)dz=\int_a^bm_2(S_z)dz=\int_a^b(π\psi^2(z)-πφ^2(z))dz=2π\int_a^b(\frac{1}{2}\psi^2(z)-\frac{1}{2}φ^2(z))dz=$
+$\displaystyle =2π\int_a^b\left[\frac{x^2}{2}\right]_{φ(z)}^{\psi(z)}dx=2π\int_a^b(\int_{φ(z)}^{\psi(z)}xdx)dz=2π\iint_Dxdxdz=2πm_2(D)\cdot \displaystyle \frac{\iint_Dxdxdz}{m_2(D)}=2πx_bm_2(D)$.
+$2πx_b$ è la distanza sulla circonferenza che il baricentro percorre
+### Cambio di bariabili negli integrali multipli
++ Caso $N=1$
+#### Teorema
+Se $f:I=[a,b]\to \mathbb{R}$ è continua è $φ:K=[α,β]\to I$ è t.c.
+1. $φ\in C^1$
+2. $φ$ è biiettiva
+3. $φ'(t)\neq 0$ $\forall t\in K$, cioè $φ'(t)>0$ $\forall t\in K$ o $φ'(t)<0$ $\forall t\in K$
+![3)](../φ'.png)
+allora
+$\displaystyle \int_a^bf(x)dx=\begin{cases}\int_α^βf(φ(t))φ'(t)dt\\\int_β^αf(φ(t))φ'(t)dt \end{cases}$, cioè
+$\displaystyle \int_α^βf(φ(t))φ'(t)dt=-\int_β^αf(φ(t))φ'(t)dt$
+cioè
+$\int_a^bf(x)dx=\int_α^βf(φ(t))φ'(t)dt$
+### Integrali generalizzati in $\mathbb{R}^n$
+#### Premessa
+Come definire:
+$\iint_{\mathbb{R}^2}e^{-x^2-y^2}dxdy$
+### Insieme localmente misurabile
+Sia $J\subseteq \mathbb{R}^n$. Si dice che $J$ è localmente misurabile uin $\mathbb{R}^n$ se $\forall E$, insieme misurabile in $\mathbb{R}^n$ si ha che $J\cap E$ è misurabile in $\mathbb{R}^n$
+### Funzione localmente integrabile
+Sia $f:J(\subseteq \mathbb{R}^n)\to \mathbb{R}$ una funziona, $J$ localmente misurabile in $\mathbb{R}^n$. Si dice che $f$ è localmente integrabile se essite una successione $(A_n)_n$ di insiemi __misurabili__ in $\mathbb{R}^n$ t.c.
+1. $A_n\supset A{n+1}$ $\forall n$
+2. $\forall E$ insieme misurabile in $\mathbb{R}^n$, con $E\subseteq J$, $\displaystyle \lim_{n\to +\infty}(m_n(E\setminus A_n))=0$
+3. $\displaystyle f_{|_{A_n}}$ è integrabile su $A_n$, $\forall n$
+### Funzione integrabile in seno generalizzato
+Sia $f:J(\subseteq \mathbb{R}^n)\to \mathbb{R}$ localmente integrabile su $J$ localmente misurabile, con $f(\underline{x})\ge 0$ $\forall \underline{x}\in J$.
+Si dice che $f$ è integrabile in senso generalizzato su $J$ se esiste __finito__ $\displaystyle\lim_{n\to +\infty}\int_{A_n}f$ e si poine $\int_Jf=\displaystyle\lim_{n\to +\infty}\int_{A_n}f$ 
+### NB
+esiste sempre __finito__ o __infinito__ $\displaystyle\lim_{n\to +\infty}\int_{A_n}f$ poichè $\int_{A_n}f\le \int_{A_n}f$ $\forall n$ (per monotonia)
+### Teorema
+Sia $f:J(\subseteq\mathbb{R}^n)\to\mathbb{R}$ localmente integrabile su $J$ localmente misurabile.
+Se $(A_n)_n$ e $(B_n)_n$ sono successioni di insiemi misurabili in $\mathbb{R}^n$ verificanti (1), (2) e (3), allora
+$\displaystyle\lim_{n\to +\infty}\int_{A_n}f=\lim_{n\to +\infty}\int_{B_n}f$
+### Integrale in senso generalizzato (caso generale)
+$f:J(\subseteq\mathbb{R}^n)\to\mathbb{R}$ localmente integrabile su $J$ localmente misurabile.
+Si dice che $f$ è integrabile in senso generalizzato su $J$ se e solo se $f^+(\underline{x})$ e $f^-(\underline{x})$ sono integrabili in senso generalizzato su $J$ e si pone $\int_Jf=\int_Jf^+-\int_Jf^-$
+#### Teorema
+Sia $f:J(\subseteq\mathbb{R}^n)\to\mathbb{R}$ localmente integrabile su $J$ localmente misurabile. Si ha che $f$ è integrabile in senso generalizzato su $J$ se e solo se $|f|$ è integrabile in senso generalizzato su $J$.
+Inoltre risulta $\displaystyle \int_Jf=lim_n\int_{A_n}f$, dove $(A_n)_n$ è una successone di insiemi misurabili verificante (1), (2) e (3).
+#### Misure in senso generalizzato in $\mathbb{R}^n$
+Sia $J$ localmente misurabile in $\mathbb{R}^n$. Si dice che $J$ è misurabile in senso generalizzato in $\mathbb{R}^n$ se $\mathcal{X}_J$ è integrabile in senso generalizzato su $J$ e si pone $m_n(J)=\int_J1$
+### Misurazione e integrazione su curve e superfici
+#### Lunghezza di una curva in $\mathbb{R}^n$ ($n=2$ o $n=3$)
+##### Idea - Rettificabilità e lunghezza di una curva
+Sia $Y:I=[a,b]\to \mathbb{R}$ continua. Sia $δ\in\Delta(I)$ individuata dai nodi $a=t_0,t_1,...,t_n=b$
+Si consideri la poligonale $π(δ)$ formata dagli $n$ segmenti $σ_i(t):[0,1]\to \mathbb{R}^n$ con $σ_i(s)=γ(t_{i-1})+s(γ(t_i)-γ(t_{i-1}))$, per $i=1,...,n$
+Si ha $\displaystyle l(π(δ))=\sum_{i=1}^{n}||γ(t_i)-γ(t_{i-1})||$ se $\underset{δ\in\Delta(I)}{sup}l(π(δ))<+\infty$, si dice che $γ$ è rettificabile e si pone $l(γ)=\underset{δ\in\Delta(I)}{sup}l(π(δ))$
+##### Osservazione
+Non tutte le curve continue sono rettificabili
+##### Lemma
+Se $g:[a,b]\to \mathbb{R}^n$ è continua, allora si pone $\int_a^bg(t)dt=(\int_a^bg_1(t)dt,...,\int_a^bg_n(t)dt)^T$ e si ha $||\underbrace{\int_a^bg(t)dt}_{\in \mathbb{R}^n}||\le \int_a^b||g(t)||dt$
+#### Teorema di rettificabilità
+Se $γ:I=[a,b]\to \mathbb{R}$ è di classe $C^1$, allora $γ$ è rettificabile e $l(γ)=\int_a^b||γ'(t)||dt$
+#### Dimostrazione
+Sia $δ\in\Delta(I)$. Si ha $l(π(δ))=\displaystyle \sum_{i=1}^n||γ(t_i)-γ(t_{i-1})||=\sum_{i=1}^n||\int_{t_{i-1}}^{t_i}γ'(t)dt||\le \sum_{i=1}^n\int_{t_{i-1}}^{t_i}||γ'(t)||dt=\int_a^b||γ'(t)||dt<+\infty$
+Quindi risulta $\underset{δ\in\Delta(I)}{sup}l(π(δ))\le \int_a^b||γ'(t)||dt<+\infty$
+Poichè $γ$ è rettificabile e $l(γ)\le \int_a^b||γ'(t)||dt<+\infty$ si pone la validità della disuguaglianza posta
+#### Lunghezza di una curva in forma cartesiana
+Sia $f:[a,b]\to \mathbb{R}$ di classe $C^1$ una curva in forma cartesiana
+$γ(t)=(t,f(t))^T$, $t\in [a,b]$, rettificabile
+$l(G(f))=\int_a^b\sqrt{1+(f'(t))^2}dt$
+'
