@@ -2,7 +2,7 @@
 attachments: [ccc.png, supcil.png, SuperFormaCart.png, σxσ.png]
 title: Analisi II - ottava parte
 created: '2020-01-20T10:13:22.442Z'
-modified: '2020-01-20T16:09:59.698Z'
+modified: '2020-01-20T16:59:23.640Z'
 ---
 
 # Analisi II - ottava parte
@@ -197,3 +197,39 @@ $\iint_K<g,\nu>ds$ ha il significato di flusso attraverso $\Sigma$
 ### Dominio generalmente regolare in $\mathbb{R}^2$
 Un aperto limitato e connesso $D\subseteq \mathbb{R}^2$ si dice (generalmente) regolare se esiste una curva $γ$ regolare $γ:[a,b]\to \mathbb{R}$ regolare (a tratti) semplice e chiusa t.c. $frD=sost(γ)$
 $γ$ orienta positivamente $frD$ e in tal caso $γ$ si indica con $+frD$, se al crescere di $t\in[a,b]$. Il punto $γ(t)$ percorre $frD$ in verso antiorario
+Si ha $\displaystyle \underbrace{τ(t)}_{\text{ Vettore tangente}}=\displaystyle \frac{(x'(t),y'(t))^T}{\underbrace{||γ'(t)||}_{\text{ versore tangente}}}$, dove $γ=(x(t),y(t))^T$
+$\nu(t)=\displaystyle \frac{(y'(t)-x'(t))^T}{||γ'(t)||}$, versore normale esterno
+### Osservazione
+$frD$ misurabile $\Rightarrow D$ misurabile, sia $σ:B(\subseteq \mathbb{R}^2)\to \mathbb{R}^3$, $B$ aperto, t.c.
+1. $σ$ è di classe $C^1$ in $B$
+2. $σ_u\times σ_v\neq \underline{0}$ in $B$
+3. $σ$ è iniettiva
+Sia $D$ un dominio generalmente regolare $(D\subseteq B)$, t.c. $clD\subseteq B$ $\Rightarrow \displaystyle σ_{|_{clD}}$ è una superficie regolare semplice
+Sia $γ:[a,b]\to B$ regolare a tratti semplice e chiusa che orienta positivamente $frD$, cioè $γ=+frD$
+Indichiamo con $+\partial \Sigma$ regolare a tratti $σ\circ γ:[a,b]\to \mathbb{R}^3$ si dice __bordo di__ $\Sigma$
+### Teorema di Stokes (del rotore)
+Se $g:A(\subseteq \mathbb{R}^3)\to \mathbb{R}^3$ è un campo vettoriale di classe $C^1$ con $\Sigma\subset A$, allora $\underbrace{\iint_\Sigma<rotg,\nu>dσ}_{\text{Flusso del rotore}}=\underbrace{\int_{+\partial\Sigma}<g,τ>ds}_{\text{Circolazione del campo}}$
+#### Caso particolare
+Se $σ(u,v)=(u,v,0)^T$, si ha che $\Sigma=clD$ e quindi $\displaystyle \iint_{clD}<rotg,\underbrace{\underline{e}_3}_{\text{Normale a }clD}>dσ\iint(Y_x-X_y)dxdy\overset{\text{Stokes}}{=}\int_{+frD}<g,τ>ds$
+### Dominio regolare nello spazio $\mathbb{R}^3$
+Sia $D\subseteq\mathbb{R}^3$ un aperto limitato e connesso. Si dice che $D$ è un dominio regolare in $\mathbb{R}^3$ se esiste $φ:\mathbb{R}^3\to \mathbb{R}$ di classe $C^1$ t.c. $D=\{\underline{x}\in \mathbb{R}^3: φ(\underline{x})=0\}$. $frD=\{\underline{x}\in \mathbb{R}^3,φ(\underline{x})=0\}=L_0(φ)$ e $\nabla φ\neq \underline{0}$ su $frD$. (cioè $frD$ è una superficie regolare in forma implicita).
+Il versore $\nu(\underline{x})=\displaystyle \frac{\nabla φ(\underline{x})}{||\nabla φ(\underline{x})||}$ si dice versore normale esterno a $D$ nel punto $\underline{x}\in frD$
+### Teorema della divergenza (di Gauss)
+Se $g:A(\subseteq\mathbb{R}^3)\to \mathbb{R}^2$, di classe $C^1$ e $D$ è un dominio regolare in $\displaystyle \mathbb{R}^3$ con $clD\subseteq A$, allora $\iiint_Ddivg(x,y,z)dxdydz=\iint_{frD}<g,\nu>dσ$
+### Osservazione
+$frD$ è trascurabile $\Rightarrow$ $D$ è misurabile
+### Significato del rotore e della divergenza in $\mathbb{R}^2$
+Sia $g:A(\subseteq\mathbb{R}^2)\to \mathbb{R}^2$ un campo vettoriale di classe $C^1$ $A$ aperto, che interpretiamo come un campo di velocità
+Per ogni $ε>0$ sono
+$D_ε=\{(x,y)^T:(x-x^0)+(y-y^0)<ε^2\}$
+$C_ε=frD_ε$ e $γ_ε=(x^0+εcost,y^0+εsint)^T$, $T\in [0,2π]$
+Si ha $γ_ε=+frD_ε$
+Scomponiamo $g$ lungo $τ$ e $\nu$:
+$g=<g,τ>τ+<g,\nu>\nu$
+Rotore, per il teorema di Stokes si ha:
+$\iint_{D_ε}<rotg,\underline{e}_3>dxdy=\int_{+frD_ε}<g,τ>ds$. 
+Per il teorema della media integrale si ha:
+$2π\cancel{ε^2}<rotg,x^ε,y^ε,\underline{e}_3>=\displaystyle \frac{1}{ε^2}\int_{+frD_ε}<g,τ>ds$
+Se $e\to 0^+$: $2π<rotg(x^0,y^0),\underline{e}_3>=lim_{ε\to 0^+}\int_{+frD_ε}<g,τ>ds$
+Identificando $D_ε$ con una rotellina centrata in $(\underline{x}^0,\underline{y}^0)^T$ di raggio $ε>0$, si ha per $ε$ sufficientemente piccolo, $<rotg(x^0,y^0),\underline{e}_3>>0\Rightarrow\int_{+frD_ε}<g,τ>ds>0\Rightarrow$ la rotellina ruota in senso antiorario attorno a $(x^0,y^0)^T$ 
+$<rotg(x^0,y^0),\underline{e}_3><0\Rightarrow\int_{+frD_ε}<g,τ>ds<0\Rightarrow$ la rotellina ruota in senso orario attorno a $(x^0,y^0)^T$
