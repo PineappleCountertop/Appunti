@@ -1,8 +1,8 @@
 ---
-tags: [Analisi II]
+tags: [Analisi II, Esportati]
 title: Analisi II - prima parte
 created: '2020-01-03T12:27:53.464Z'
-modified: '2020-01-17T16:44:16.393Z'
+modified: '2020-01-20T19:15:33.463Z'
 ---
 
 # Analisi II - prima parte

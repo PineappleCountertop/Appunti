@@ -1,8 +1,9 @@
 ---
 attachments: [ccc.png, supcil.png, SuperFormaCart.png, σxσ.png]
+tags: [Analisi II, Esportati]
 title: Analisi II - ottava parte
 created: '2020-01-20T10:13:22.442Z'
-modified: '2020-01-20T16:59:23.640Z'
+modified: '2020-01-20T19:15:51.107Z'
 ---
 
 # Analisi II - ottava parte

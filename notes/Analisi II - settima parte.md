@@ -1,10 +1,10 @@
 ---
 attachments: [IntegCorda.png, IntegE.png, IntegER3.png, IntegSezioni.png, φ'.png]
 pinned: true
-tags: [Analisi II]
+tags: [Analisi II, Esportati]
 title: Analisi II - settima parte
 created: '2020-01-16T16:47:57.592Z'
-modified: '2020-01-20T10:13:05.548Z'
+modified: '2020-01-20T19:16:57.975Z'
 ---
 
 # Analisi II - settima parte

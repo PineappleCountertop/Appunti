@@ -1,8 +1,8 @@
 ---
-tags: [Analisi II]
+tags: [Analisi II, Esportati]
 title: Analisi II - seconda parte
 created: '2020-01-03T18:36:54.790Z'
-modified: '2020-01-06T19:20:18.171Z'
+modified: '2020-01-20T19:15:44.198Z'
 ---
 
 # Analisi II - seconda parte
@@ -16,7 +16,7 @@ Se $\sum a_n$ e $\sum b_n$ sono due serie date e $α,β\in \mathbb{R}$ allora $\
 ## Teorema
 Se $\sum a_n=A\in \mathbb{R}$ e $\sum b_n=B\in\mathbb{R}$ allora $\sum(αa_n+βb_n)$, con $α,β\in \mathbb{R}$ converge a $αA+βB$
 ## Dimostrazione
-$\forall n c_n=αa_n+βb_n$
+$\forall n$, $c_n=αa_n+βb_n$
 
 ## Serie con termini di segno misto
 Si tratta di serie aventi infiniti termini positivi e infiniti termini negativi
