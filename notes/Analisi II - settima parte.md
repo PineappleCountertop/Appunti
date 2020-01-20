@@ -4,7 +4,7 @@ pinned: true
 tags: [Analisi II]
 title: Analisi II - settima parte
 created: '2020-01-16T16:47:57.592Z'
-modified: '2020-01-19T11:17:33.799Z'
+modified: '2020-01-20T10:13:05.548Z'
 ---
 
 # Analisi II - settima parte
@@ -304,4 +304,6 @@ Poichè $γ$ è rettificabile e $l(γ)\le \int_a^b||γ'(t)||dt<+\infty$ si pone 
 Sia $f:[a,b]\to \mathbb{R}$ di classe $C^1$ una curva in forma cartesiana
 $γ(t)=(t,f(t))^T$, $t\in [a,b]$, rettificabile
 $l(G(f))=\int_a^b\sqrt{1+(f'(t))^2}dt$
-'
+#### Lunghezza di una curva in forma polare
+Sia $ρ:(\cdot):[α,β]\to \mathbb{R}\in C^1$ con $ρ(ϑ)\ge 0$ in $[α,β]$ una curva in forma polare
+$γ(ϑ)=(ρ(ϑ)cosϑ,ρ(ϑ)sinϑ)^T$, $l(γ)=\int_α^β||γ'(t)||dϑ=\int_α^β\sqrt{(ρ(ϑ))^2+(ρ'(ϑ))^2}dϑ$
