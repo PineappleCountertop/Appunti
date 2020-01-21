@@ -3,7 +3,7 @@ attachments: [Lotka-Volterra.png]
 tags: [Analisi II, Esportati]
 title: Analisi II - sesta parte
 created: '2020-01-13T10:35:45.970Z'
-modified: '2020-01-20T19:35:58.860Z'
+modified: '2020-01-21T12:12:35.537Z'
 ---
 
 # Analisi II - sesta parte
@@ -39,7 +39,7 @@ Se inoltre le derivate parziali $\displaystyle \frac{\partial F}{\partial y_i}$ 
 ### Teorema di esistenza globale
 Se $F:A=I\times \mathbb{R}^n\to \mathbb{R}^n$, $I$ intervallo, $A$ aperto è continua in $A$, $x^0\in I$, $\underline{y}^0\in \mathbb{R}^n$ e, per ogni intervallo compatto $H\subset I$, esistono $α,β\in \mathbb{R}$ t.c. $||F(x,\underline{y})||<α||\underline{y}||+β$, $\forall x\in H$ e $\underline{y}\in \mathbb{R}^n$ allora il PC $\begin{cases}\underline{Y}'=F(x,\underline{Y})\\ \underline{Y}(x^0)=\underline{Y}^0 \end{cases}$ ha almeno una soluzione $\underline{y}(\cdot)$ determinata su $I$
 ### SEDO lineari del $I$ ordine di dimensione $n$
-Sia $\displaystyle \mathbb{A}(x)=\begin{pmatrix}a_{11}(x)\dots a_{1n}(x)\\ \vdots \text{    }\ddots \text{    }\vdots \\ a_{n1}(x)\dots a_{nn}(x)\end{pmatrix}$ una matrice di $n\times n$ funzioni $a_{ij}(\cdot):I(\subseteq \mathbb{R})\to \mathbb{R}$, per $i,j=1,...,n$, con $I$ intervallo aperto, continue in $I$ e sia $B(x)=\begin{pmatrix}b_1(x)\\ \vdots \\ b_n(x)\end{pmatrix}$ un vettore di $N$ funzioni $b_i(|cdot):I\to \mathbb{R}$ per $i=1,...,n$.
+Sia $\displaystyle \mathbb{A}(x)=\begin{pmatrix}a_{11}(x)&\dots& a_{1n}(x)\\ \vdots& \ddots &\vdots \\ a_{n1}(x)&\dots& a_{nn}(x)\end{pmatrix}$ una matrice di $n\times n$ funzioni $a_{ij}(\cdot):I(\subseteq \mathbb{R})\to \mathbb{R}$, per $i,j=1,...,n$, con $I$ intervallo aperto, continue in $I$ e sia $B(x)=\begin{pmatrix}b_1(x)\\ \vdots \\ b_n(x)\end{pmatrix}$ un vettore di $N$ funzioni $b_i(|cdot):I\to \mathbb{R}$ per $i=1,...,n$.
 Il SEDO (c) $\underline{y}'(x)=\mathbb{A}(x)\underline{y}(x)+B(x)\Leftrightarrow \underline{y}'=\underbrace{\mathbb{A}(x)\underline{y}+B}_{F(x,\underline{y})}$, con $\underline{y}(x)=\begin{pmatrix}v_1(x)\\ \vdots \\ y_n(x)\end{pmatrix}$. Si dice SEDO lineare del $I$ ordine di dimensione $n$ completo
 Il SEDO (o) $\underline{y}'(x)=\mathbb{A}(x)\underline{y}(x)\Leftrightarrow \underline{y}'=\mathbb{A}(x)\underline{y}$ si dice SEDO del $I$ ordine di dimensione $n$ omogeneto
 ### Teorema 0
@@ -68,14 +68,14 @@ Se $n=1$ $\mathbb{U}(x)=e^{A(x)}$, con $A'(x)=a(x)$.
 Risulta
 $\mathbb{U}'(\cdot)=(z'_1(\cdot),...,z'_n(\cdot))=(\mathbb{A}z_1(\cdot),...,\mathbb{A}z_n(\cdot))=\mathbb{A}(\cdot)\mathbb{U}(\cdot)$ e $\mathbb{U}(x^0)=\mathbb{I}=I_n$ matrice identità. Cioè $\mathbb{U}$ risolve il (PC) matriciale $\begin{cases}\mathbb{U}'=\mathbb{A}(x)\mathbb{U}\\ \mathbb{U}(x^0)=\mathbb{I}=I_n \end{cases}$
 Si ha $det\mathbb{U}(x)\neq 0$, $\forall x\in I$. Infatti supponendo per assurdo che esista $\overline{x}\in I$ t.c. $det(mathbb{U})=0$, si avrebbe che $z_1(\overline{x},...,z_n(\overline{x})$ sono linearmente dipendenti, cioè $\exists c_1,...,c_n\in \mathbb{R}$ __non tutti nulli__ t.c. $c_1z_1(\overline{x})+...+c_nz_n(\overline{x})=\underline{0}$. Allora la funzione $y(\cdot)=c_1z_1(\cdot)+...+c_nz_n(\cdot)$ è soluzione di $\begin{cases}\underline{y}'=\mathbb{A}(x)\underline{y}\\ \underline{y}(\overline{x})=0\end{cases}$ (in quanto combinazione lineare di soluzioni di (o)). Poichè la funzione nulla $0$ è anche soluzione, per l'unicità, dev'essere $\underline{y}(x)=\underline{0}$, $\forall x\in I$ e quindi $c_1=...=c_n=0$, assurdo ↯, $\Rightarrow$ $det(\mathbb{U}\neq 0$, $\forall x$. Ne consegue che $\mathbb{U}$ è sempre invertibile $\forall x\in I$, esiste $\mathbb{U}^{-1}(x)$.
-#### Matriche esponenziale
+#### Matrice esponenziale
 Sia $\mathbb{A}(\cdot)$ indipendente da $x$, cioè $\mathbb{A}(\cdot)=\mathbb{A}$. Allora il sistema si dice __autonomo__. $\underline{y}=\mathbb{A}\underline{y}$. In questo caso $\mathbb{U}(x)$ si indica con $e^{\mathbb{A}x}$. In particolare $e^{\mathbb{A}}$ si dice __matrice esponenziale__.
 #### Osservazione
 Se $n=1$, $\mathbb{A}=(a)$, con $a\in \mathbb{R}$, $\mathbb{U}(x)=e^{ax}$.
 Si ha che $e^{\mathbb{A}x}=\displaystyle \sum_{n=0}^{+\infty}\frac{1}{n!}\mathbb{A}^nx^n=\mathbb{I}+\mathbb{A}x+\frac{1}{2}\mathbb{A}^2x^2+...+\frac{1}{n!}\mathbb{A}^nx^n$, con $x\in \mathbb{R}$
 #### Osservazione
 Se $n=1$: $\displaystyle e^{\mathbb{A}x}=\sum\frac{1}{n!}a^nx^n$, con $x\in \mathbb{R}$
-### Teorema 4 (determinazioe delle soluzioni particolari di (c))
+### Teorema 4 (determinazione delle soluzioni particolari di (c))
 Una soluzione particolare di (c) è data da $\underline{y}(x)=\int_{x_0}^x \mathbb{U}(x)\mathbb{U}^{-1}(t)B(t)dt$, $\forall x\in I$, $x_0\in I$.
 ### Osservazione
 Se $n=1$: $\displaystyle \underline{y}(x)=\int_{x_0}^x e^{\mathbb{A}x} e^{-\mathbb{A}(t)}b(t)dt$.
@@ -83,5 +83,5 @@ La funzione matriciale $G(x,t)=\mathbb{U}(x)\mathbb{U}^{-1}(t)$, con $x,t\in I$ 
 ### Osservazione
 Se $n=1$, $G(x,t)=e^{\mathbb{A}(x)-\mathbb{A}(t)}$ con $\mathbb{A}'(x)=a(x)$, $\forall x\in I
 ### Dimostrazione
-Si ha $\overline{\underline{y}}'(x)=\displaystyle \frac{d}{dt}(\mathbb{U}(x)\int_{x_0}^x\mathbb{U}^{-1}(t)B(t)dt)=\underbrace{\mathbb{U}'(x)}_{\mathbb{A}(x)\cdot \mathbb{U}(x)}\cdot \int_{x_0}^x\mathbb{U}^{-1}B(t)dt+\underbrace{\mathbb{U}(x)\cdot \mathbb{U}^{-1}(x)}_{=\mathbb{I}=I_n}\cdot B(x)=\mathbb{A}(x)\cdot \mathbb{U}(x)\cdot \int_{x_0}^x\mathbb{U}^{-1}(t)B(t)dt+B(x)=\underline{\mathbb{A}(x)\overline{\underline{y}}(x)+B(x)}_{\displaystyle =\overline{\underline{y}}(x)}$, $\forall x\in I$
+Si ha $\overline{\underline{y}}'(x)=\displaystyle \frac{d}{dt}(\mathbb{U}(x)\int_{x_0}^x\mathbb{U}^{-1}(t)B(t)dt)=\underbrace{\mathbb{U}'(x)}_{\mathbb{A}(x)\cdot \mathbb{U}(x)}\cdot \int_{x_0}^x\mathbb{U}^{-1}B(t)dt+\underbrace{\mathbb{U}(x)\cdot \mathbb{U}^{-1}(x)}_{=\mathbb{I}=I_n}\cdot B(x)=\mathbb{A}(x)\cdot \mathbb{U}(x)\cdot \int_{x_0}^x\mathbb{U}^{-1}(t)B(t)dt+B(x)=\mathbb{A}(x)\cdot\overline{\underline{y}}(x)+B(x)=\overline{\underline{y}}'(x)$, $\forall x\in I$
 

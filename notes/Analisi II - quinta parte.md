@@ -4,7 +4,7 @@ favorited: true
 tags: [Analisi II, Non esportati]
 title: Analisi II - quinta parte
 created: '2020-01-06T13:23:39.864Z'
-modified: '2020-01-20T19:43:40.807Z'
+modified: '2020-01-21T11:48:45.440Z'
 ---
 
 # Analisi II - quinta parte
@@ -18,9 +18,9 @@ $\begin{cases} x=ρcosϑ \\ y=ρsinϑ \end{cases}$
 ### Curve in forma parametrica
 Sia $γ:I(\subseteq \mathbb{R})\to \mathbb{R}^n$, con $I$ intervallo. La coppia $(γ, \underbrace{γ(I)}_{=\Gamma})$ si dice curva in forma parametrica di cui $γ$ è la rappresentazione parametrica e $\Gamma=γ(I)$ è il sostegno
 + $N=2$, $γ(t)=(x(t),y(t))^T$, $t\in \mathbb{R}$
-oppure $\begin{cases} x=x(t) \\ y=(t)  \end{cases}$, $t\in I$
-+ $N=3$, $γ(t)=(x(t),y(t),z(t))^T$, $t\in \mathbb{R}$
-oppure $\begin{cases} x=x(t) \\ y=(t) \\ z=z(t)  \end{cases}$, $t\in I$
+oppure $\begin{cases} x=x(t) \\ y=y(t)  \end{cases}$, $t\in I$
++ $N=3$, $γ(t)=(x(t),y=y(t),z(t))^T$, $t\in \mathbb{R}$
+oppure $\begin{cases} x=x(t) \\ y=y(t) \\ z=z(t)  \end{cases}$, $t\in I$
 
 ### Curva in forma parametrica chiusa
 Si dice che $γ$ è una curva in forma parametrica __chiusa__ se $I=[a,b]$ e $γ(a)=γ(b)$

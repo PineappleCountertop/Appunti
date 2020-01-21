@@ -3,7 +3,7 @@ attachments: [EDOlineari.png, ModelliEpidemie.png, ModelliMatematici.png, Modell
 tags: [Analisi II, Non esportati]
 title: Analisi II - quinta parte bis
 created: '2020-01-20T19:40:18.276Z'
-modified: '2020-01-20T19:41:44.658Z'
+modified: '2020-01-21T12:01:17.155Z'
 ---
 
 # Analisi II - quinta parte bis
@@ -97,21 +97,21 @@ Il PC è ben posto secondo Hadanard nei conronti di queste questioni
 
 Supponiamo che esista una soluzion $y(\cdot):[-δ,+δ]=I\to \mathbb{R}$, $δ>0$. Si ha $y'(0)=-1$ (y decrecente in $0$) e quindi esiste $h>0$ t.c. $y(x)<y(0)$ se $0<x\le h$. Dall'equazione segue che $y'(x)=f(x,y(x))=1$ se $0<x\le h$ Dunque esiste $0=y(0)=\displaystyle\lim_{x\to 0^+} y(x)=y(x)<0$, il che è impossibile. $f$ è discontinua in $0$.
 ### Teorema di Peano
-Se $f:A(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto, è continua e $(x_o,y_0)^T\in A$ allora esistono un numero $h>0$e una funzione $y(\cdot):]x_0-h,x_0+h[\to \mathbb{R}$ soluzione del PC $\begin{cases}y'=f(x,y)\\y(x_0)=y_0 \end{cases}$
+Se $f:A(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto, è continua e $(x_o,y_0)^T\in A$ allora esistono un numero $h>0$ e una funzione $y(\cdot):]x_0-h,x_0+h[\to \mathbb{R}$ soluzione del PC $\begin{cases}y'=f(x,y)\\y(x_0)=y_0 \end{cases}$
 ### Unicità della soluzione del PC
 Il teorema di Peano non garantisce l'unicità della soluzione
 ### Teorema di Cauchy-Lipschitz di esistenza e unicità locali
-Se $f:A(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto,  continua con $\displaystyle \frac{\partial f}{\partial y}$ continua, e $(x_0,y_0)\in A$ allora esiste un numero $h>0$ ed __una ed una sola__ $y(\cdot)_I=]x_0-h,x_0+h[\to \mathbb{R}$ soluzione del PC $\begin{cases}y'=f(x,y)\\y(x_0)=y_0 \end{cases}$
+Se $f:A(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto, continua con $\displaystyle \frac{\partial f}{\partial y}$ continua, e $(x_0,y_0)\in A$ allora esiste un numero $h>0$ ed __una ed una sola__ $y(\cdot)_I=]x_0-h,x_0+h[\to \mathbb{R}$ soluzione del PC $\begin{cases}y'=f(x,y)\\y(x_0)=y_0 \end{cases}$
 ### Osservazione
 Nel teorema di Peano e nel teorema di Cauchy-Lipschitz si ha, poichè $y'(x)=f(x,y(x))$ in $]x_0-h,x_0+h[$ e $y(\cdot)$ e $f$ sono continue, che $y'(\cdot)$ è continua e quindi $y(\cdot)$ è di classe $C^1$
 ### Teorema di disuguaglianza continua del dato iniziale
-Sia $f:A(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto, continua con $\displaystyle \frac{\partial f}{\partial y}$ continua. Se $(x_0,y_0)^T\in A$ e $y(\cdot):]x_0-h,x_0+h[\to \mathbb{R}$ è soluzione di $\begin{cases}y'=f(x,y)\\y(x_0)=y_0 \end{cases}$, allora per ogni $ε>0$ esiste $δ>0$ t.c. $\forall z_0\in \mathbb{R}$, con $|z_0-y_0|<δ$, la soluzione di $z(\cdot)$ di $\begin{cases}z'=f(x,z)\\z(x_0)=z_0 \end{cases}$ è definita su $]x_0-h,x_0+h[$ e verifica $|z(x)-y(x)|<ε$, $\forall xi]x_0-h,x_0+h[$, $\Leftrightarrow$ ($||z(\cdot)-y(\cdot)||_{\infty}<ε$)
+Sia $f:A(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto, continua con $\displaystyle \frac{\partial f}{\partial y}$ continua. Se $(x_0,y_0)^T\in A$ e $y(\cdot):]x_0-h,x_0+h[\to \mathbb{R}$ è soluzione di $\begin{cases}y'=f(x,y)\\y(x_0)=y_0 \end{cases}$, allora per ogni $ε>0$ esiste $δ>0$ t.c. $\forall z_0\in \mathbb{R}$, con $|z_0-y_0|<δ$, la soluzione di $z(\cdot)$ di $\begin{cases}z'=f(x,z)\\z(x_0)=z_0 \end{cases}$ è definita su $]x_0-h,x_0+h[$ e verifica $|z(x)-y(x)|<ε$, $\forall xi]x_0-h,x_0+h[$, $\Leftrightarrow$ $(||z(\cdot)-y(\cdot)||_{\infty}<ε)$
 ### Conseguenza
 Sotto le ipotesi del teorema di Cauchy-Lipschitz il PC è ben posto
 ### Legge del prolungamento
 Se $f:A(\subseteq\mathbb{R}^2)\to\mathbb{R}$, $A$ aperto, è continua e $y(\cdot):]a,b[\to \mathbb{R}$ è una oluzione di $y'=f(x,y)$ t.c. esiste un compatto $K\subseteq A$ per cui $G(y(\cdot))\subseteq K$, allora esiste $δ>0$ t.c. $y(\cdot)$ esiste su $[a-δ,b+δ]$
 ### Teorema dell'esistenza globale della soluzione del PC
-Se $f:]a,b[\times \mathbb{R}\to\mathbb{R}$ è continua, $a\ge -\infty$, $b\le è\infty$, $(x_0,y_0)^T\in\underbrace{]a,b[\times \mathbb{R}}_{=A}$ e ogni compatto $H\subseteq ]a,b[$ eistono $α,β\in \mathbb{R}$ t.c. $|f(x,y)|\le α|y|+β$, $\forall (x,y)^T\in H\times \mathbb{R}$ (Condizione di sottolinearità), allora il PC $\begin{cases}y'=f(x,y)\\y(x_0)=y_0 \end{cases}$ ha almeno una soluzione $y(\cdot)$ definita su $]a,b[$
+Se $f:]a,b[\times \mathbb{R}\to\mathbb{R}$ è continua, $a\ge -\infty$, $b\le +\infty$, $(x_0,y_0)^T\in\underbrace{]a,b[\times \mathbb{R}}_{=A}$ e ogni compatto $H\subseteq ]a,b[$ eistono $α,β\in \mathbb{R}$ t.c. $|f(x,y)|\le α|y|+β$, $\forall (x,y)^T\in H\times \mathbb{R}$ (Condizione di sottolinearità), allora il PC $\begin{cases}y'=f(x,y)\\y(x_0)=y_0 \end{cases}$ ha almeno una soluzione $y(\cdot)$ definita su $]a,b[$
 ### Equazioni a variabili separate
 Siano $g:]a,b[\to\mathbb{R}$, $a\ge -\infty$, $b\le +\infty$, continua e $h:]c,d[\to \mathbb{R}$, $c\ge -\infty$, $d\le +\infty$, di classe $C^1$.
 Consideriamo il PC $\begin{cases}y'=f(x,y)\\y(x_0)=y_0 \end{cases}$, dove $x_0\in ]a,b[$, $y_0\in ]c,d[$. Poniamo $A=]a,b[\times]c,d[$ e $f:A\to\mathbb{R}$, $f(x,y)=g(x)h(y)$, $f$ è continua con $\displaystyle \frac{\partial f}{\partial y}$ continua in $A$. Quindi vale il teorema di esistenza e unicità locale
@@ -179,13 +179,13 @@ La funizione $\overline{y}(x)=e^{A(x)}|int_{x_0}^xe^{-A(t)}b(t)dt$ risolve (c)
 ### Corollario 1
 La generica soluzione di (c) è $y(x)=ce^{A(x)}+e^{A(x)}\int_{x_0}^xe^{-A(t)}b(t)dt$, $\forall x\in I$, con $c\in \mathbb{R}$ e $x_0\in I$
 ### Corollario 2
-$\forall x_0\in I$ e $y\in \mathbb{R}$ il PC $\begin{cases}y'=f(x,y)\\y(x_0)=y_0 \end{cases}$ ha una e una sola soluzione definita su $\mathbb{R}$ data da $y(x)=y_0\exists +\int_{x_0}^x e^{A(x)-A(t)}b(t)dt$
+$\forall x_0\in I$ e $y\in \mathbb{R}$ il PC $\begin{cases}y'=f(x,y)\\y(x_0)=y_0 \end{cases}$ ha una e una sola soluzione definita su $\mathbb{R}$ data da $y(x)=y_0$ $\exists +\int_{x_0}^x e^{A(x)-A(t)}b(t)dt$
 ### Teorema 5 (Principio di sovrapposizione)
 Se $y_1(\cdot)$ è una soluzione di $y'=a(x)y+b_1(x)$ e $y_2(\cdot)$ è una soluzione di $y'=a(x)y+b_2(x)$, allora $y_1(\cdot )+y_2(\cdot )$ è soluzione di $y'=a(x)y+[b_1(x)+b_2(x)]$
 ### Dimostrazione
 Si ha $L(y_1(\cdot )+y_2(\cdot ))=L(y_1(\cdot))+L(y_2(\cdot))=b_1(\cdot)+b_2(\cdot)$
 ### L'EDO di Bernoulli
 L'EDO $y'=a(x)y+b(x)y^γ$ con $a(\cdot),b(\cdot):I\to \mathbb{R}$, $I$ intervallo aperto, continua e $γ\in \mathbb{R}\setminus\{0,1\}$, si dice equazione di Bernoulli. Si cercano le soluzioni $y(\cdot)$ con $y(x)>0$ in $Dom(y(\cdot))$.
-Sia $y(\cdot)$ una soluzione e si divida per $y(\cdot)^γ$. Si ottiene $\displaystyle \frac{y'(x)}{y(x)^γ}=a(x)y(x)^{1-γ}+b(x)$ cioè $\displaystyle \frac{d}{dx}(\frac{1}{1-γ}y(x)^{1-γ})=(1-γ)a(x)(\frac{1}{1-γ}y(x)^{1-γ})+b(x)$, cambio di variabile (dipendente), si ponga $u(x)=\displaystyle \frac{1}{1-γ}y(x)^{1-γ}$. Allora l'EDO diventa: $u'(x)=(1-γ)a(x)u(x)+b(x)$ che è un EDO lineare del $I$ ordine
+Sia $y(\cdot)$ una soluzione e si divida per $y(\cdot)^γ$. Si ottiene $\displaystyle \frac{y'(x)}{y(x)^γ}=a(x)y(x)^{1-γ}+b(x)$ cioè $\displaystyle \frac{d}{dx}(\frac{1}{1-γ}y(x)^{1-γ})=(1-γ)a(x)\left(\frac{1}{1-γ}y(x)^{1-γ}\right)+b(x)$, cambio di variabile (dipendente), si ponga $u(x)=\displaystyle \frac{1}{1-γ}y(x)^{1-γ}$. Allora l'EDO diventa: $u'(x)=(1-γ)a(x)u(x)+b(x)$ che è un EDO lineare del $I$ ordine
 
 

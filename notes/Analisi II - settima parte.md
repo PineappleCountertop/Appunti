@@ -4,7 +4,7 @@ pinned: true
 tags: [Analisi II, Esportati]
 title: Analisi II - settima parte
 created: '2020-01-16T16:47:57.592Z'
-modified: '2020-01-21T10:06:56.066Z'
+modified: '2020-01-21T12:20:35.278Z'
 ---
 
 # Analisi II - settima parte
@@ -52,8 +52,8 @@ La collezione $δ=\{R_{ijk}:i=1,..,.n, j=1,...,m, k=1,...,l\}$ si dice decomposi
 $\Delta(R)$ è l'insieme di tutte le composizioni di $R$
 ### Somme inferiori e somme superiori
 Sia $δ$ una decomposizione di $R$, $δ\in \Delta(R)$, si pone
-$\displaystyle\sum_{k=1}^l\sum{j=1}^m\sum_{i=1}^n l_{ijk}m_3(R_{ijk})=s(δ,f)$
-$\displaystyle\sum_{k=1}^l\sum{j=1}^m\sum_{i=1}^n L_{ijk}m_3(R_{ijk})=S(δ,f)$
+$\displaystyle\sum_{k=1}^l\sum_{j=1}^m\sum_{i=1}^n l_{ijk}m_3(R_{ijk})=s(δ,f)$
+$\displaystyle\sum_{k=1}^l\sum_{j=1}^m\sum_{i=1}^n L_{ijk}m_3(R_{ijk})=S(δ,f)$
 dove $l_{ijk}=\underset{R_{ijk}}{inf}f\le L_{ijk}=\underset{R_{ijk}}{sup}f$ e $m_3(R_{ijk})=(x_i-x_{i-1})(y_j-y_{j-1})(z_k-z_{k-1})$, per $i=1,..,.n$, $j=1,...,m$, $k=1,...,l$.
 ### Proposizione
 $\forall δ_1,δ_2\in \Delta(R)$ si ha $s(δ_1,f)\le S(δ_2,f)$
