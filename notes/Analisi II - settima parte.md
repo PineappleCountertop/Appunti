@@ -4,7 +4,7 @@ pinned: true
 tags: [Analisi II, Esportati]
 title: Analisi II - settima parte
 created: '2020-01-16T16:47:57.592Z'
-modified: '2020-01-20T19:16:57.975Z'
+modified: '2020-01-21T10:06:56.066Z'
 ---
 
 # Analisi II - settima parte
@@ -22,11 +22,11 @@ Sia $f$ una funzione __limitata__, $-\infty<l=\underset{R}{inf}f\le L=\underset{
 Si pone $\Delta(R)=\{δ:δ\text{ è decomposizione di }R\}\leftarrow$ è l'insieme delle decomposizioni.
 ### Somme inferiori e somme superiori
 Sia una $δ\in \Delta(R)$
-$\sum_{j=1}^m\sum_{i=1}^n l_{ij}\cdot m_2(R_{ij}=s(δ,f)\to$ __Somma inferiore__,
+$\displaystyle\sum_{j=1}^m\sum_{i=1}^n l_{ij}\cdot m_2(R_{ij})=s(δ,f)\to$ __Somma inferiore__,
 $l_{ij}=\underset{R-{ij}}{inf}f\to$ altezza, misurata fino al minimo della funzione in quell'area
 $m_2(R_{ij})=(x_i-x_{i-1})(y_j-y_{j-1})\to A_{\text{base}}$, $\forall i=1,...,n,j=1,...,m$
 $l_{ij}\cdot m_2$ è dunque il volume inscritto nella figura solida, delimitata dal valore minimo della funzione e dal piano $xy$
-$\sum_{j=1}^m\sum_{i=1}^n L_{ij}\cdot m_2(R_{ij}=\mathbb{S}(δ,f)\to$ __Somma superiore__,
+$\displaystyle\sum_{j=1}^m\sum_{i=1}^n L_{ij}\cdot m_2(R_{ij})=\mathbb{S}(δ,f)\to$ __Somma superiore__,
 $L_{ij}=\underset{R-{ij}}{sup}f\to$ altezza, misurata fino al massimo della funzione in quell'area
 $m_2(R_{ij})=(x_i-x_{i-1})(y_j-y_{j-1})\to A_{\text{base}}$, $\forall i=1,...,n,j=1,...,m$
 $L_{ij}\cdot m_2$ è dunque il volume del parallelpipedo circoscritto alla figura solida, delimitata dal valore massimo della funzione e dal piano $xy$
@@ -180,7 +180,7 @@ La funzione caratteristica $\mathcal{X}_E$ è limitata su $R$ e continua su $R\s
 Se $f:E(\subseteq \mathbb{R}^n)\to \mathbb{R}$ è continua su $E$, compatto, misurabile, allora $f$ è integrabile su $E$.
 ### Dimostrazione
 Poichè $f$ è continua su $E$ compatto, $f$ è limitata su $E$.
-Sia $R$ un $n$-rettangolo con $E\subseteq R$ e sia $f_0:R\to R$ definita da $f_0(\underline{x})=\begin{cases}f(\underline{x}),\underline{x}\in E \\0, \underline{x}\in R\setminusE \end{cases}$.
+Sia $R$ un $n$-rettangolo con $E\subseteq R$ e sia $f_0:R\to R$ definita da $f_0(\underline{x})=\begin{cases}f(\underline{x}),\underline{x}\in E \\0, \underline{x}\in R\setminus E \end{cases}$.
 $f_0$ è limitata su $R$ ed è continua su $R\setminus frE$, con $m_n(frE)=0$, essendo $E$ misurabile in $\mathbb{R}^n$. Quindi $f_0$ è integrabile su $R$ e perciò $f$ è integrabile su $E$
 ### Proprietà dell'integrale su insiemi misurabili
 + Linearità
