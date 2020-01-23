@@ -2,7 +2,7 @@
 tags: [Analisi II, Esportati]
 title: Analisi II - quarta parte bis
 created: '2020-01-20T19:29:30.391Z'
-modified: '2020-01-21T11:44:13.689Z'
+modified: '2020-01-23T11:22:29.193Z'
 ---
 
 # Analisi II - quarta parte bis
@@ -81,7 +81,7 @@ $Q$ è definita positiva $\Leftrightarrow$ $λ_1>0,...,λ_n>0$. Pongo $m=min\{λ
 ### Teorema
 Sia $f:E(\subseteq\mathbb{R}^n)\to\mathbb{R}$ due volte differenziabile in $\underline{x}^0\in intE$ e sia $\underline{x}^0$ un punto criticodi $f$, ossia $\nabla f(\underline{x}^0)=\underline{0}$. Si ha:
 1. Se $Hf(\underline{x}^0)$ è definita positiva, allora $\underline{x}^0$ è punto di minimo per $f$
-2. Se $Hf(\underline{x}^0)$ è definita positiva, allora $\underline{x}^0$ è punto di massimo per $f$ 
+2. Se $Hf(\underline{x}^0)$ è definita negativa, allora $\underline{x}^0$ è punto di massimo per $f$ 
 3. Se $Hf(\underline{x}^0)$ è indefinita nel segno, allora $\underline{x}^0$ è punto di sella per $f$
 ### Dimostrazione
 $f(\underline{x}^0)=f(\underline{x}^0)+<\nabla f(\underline{x}^0),\underline{x}-\underline{x}^0>+\frac{1}{2}<Hf(\underline{x}^0)(\underline{x}-\underline{x}^0),\underline{x}-\underline{x}^0>+o(||\underline{x}-\underline{x}_0||^2)$. Il punto è critico $\Rightarrow$ $\nabla f(\underline{x}^0)=\underline{0}$ $\Rightarrow$ $<\nabla f(\underline{x}^0),\underline{x}-\underline{x}^0>=0$. Allora: $f(\underline{x})-f(\underline{x}^0)=\frac{1}{2}<Hf(\underline{x}^0)(\underline{x}-\underline{x}^0),\underline{x}-\underline{x}^0>+o(||\underline{x}-\underline{x}_0||^2)$. Nel primo caso $Hf(\underline{x}^0)$ è definita positiva e quindi $\exists m>0$ t.c. $<Hf(\underline{x}^0)\underline{h},\underline{h}>\ge m||\underline{h}||^2$, $\forall \underline{h}\in \mathbb{R}^n$. Allora risulta che la funzione $\displaystyle f(\underline{x})-f(\underline{x}^0)=\frac{1}{2}<Hf(\underline{x}^0)(\underline{x}-\underline{x}^0),\underline{x}-\underline{x}^0>+o(||\underline{x}-\underline{x}_0||^2)\ge \frac{m}{2}||\underline{x}-\underline{x}^0||^2+o(||\underline{x}-\underline{x}^0||^2)=\left(\frac{m}{2}+\frac{o(||\underline{x}-\underline{x}^0||^2)}{||\underline{x}-\underline{x}^0||^2}\right)||\underline{x}-\underline{x}^0||^2$. Poichè $\displaystyle\lim_{\underline{x}\to \underline{x}^0}\left(\frac{m}{2}+\frac{o(||\underline{x}-\underline{x}^0||^2)}{||\underline{x}-\underline{x}^0||^2}\right)=\frac{m}{2}>0$ e, per il teorema di permanenza del segno esiste un intorno $U$ di $\underline{x}^0$ tale per cui $\frac{m}{2}+\frac{o(||\underline{x}-\underline{x}^0||^2)}{||\underline{x}-\underline{x}^0||^2}>0$, $\forall \underline{x}\in U\cap E$, con $\underline{x}\neq \underline{x}^0$. Ne segue che $f(\underline{x})-f\underline{x}^0)>0$, $\forall \underline{x}\in U\cap E$, con $\underline{x}\neq \underline{x}^0$, ossia $\underline{x}^0$ è punto di minimo relativo, la situazione è analoga per il secondo caso.
